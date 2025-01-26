@@ -1,0 +1,10 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(to right, #ecf38e 15%, #f397df); /* Gradient from left to right */
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    margin: 0;
+}

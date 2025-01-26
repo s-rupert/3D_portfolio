@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+
+#logo{
+    margin-top: 3%;
+    margin-left: 8%;
+    width:250px;
+    height:150px;
+}
+
+#l-top, #l-bottom{
+    font-family: "Rubik Wet Paint", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+#l-top{
+    color:rgb(255, 174, 0);
+    font-size: 50px;
+    
+}
+#l-bottom{
+    margin-top:-20px;
+    font-size: 35px;
+    color:rgb(0, 0, 0);
+}
+#main_info{
+    margin-top: 7%;
+    margin-left: 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#i_1{
+    font-size: 40px;
+    font-weight: 500;
+}
+#i_2{
+    font-size: 50px;
+    font-weight: 600;
+}
+#i_3{
+    display:flex;
+    flex-direction: row;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+}
+#i_3_1{
+    font-size: 50px;
+    font-weight: 500;
+}
+#i_3_2{
+    font-family: "Rubik Wet Paint", serif;
+    font-size: 80px;
+    font-weight: 900;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+}
+#i_4{
+    font-size: 70px;
+    font-weight: 500;
+}
+
+#contact {
+    background-color: rgb(235, 160, 63);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 30px;
+    padding:7px 15px;
+    border-radius: 10px;
+    color:wheat;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+#contact:hover{
+         box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.8);
+         background-color: wheat;
+         color: rgb(243, 188, 9); /* Shadow on hover */
+    }

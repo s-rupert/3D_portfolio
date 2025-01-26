@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
+import './index.css';
+import { Timer } from './Timer';
 import { ThreeScene } from './AirCraft';
-import { Island } from './Island';
+import { Homepage } from './Home';
 function App() {
     return (
       <div>
-        {/* <ThreeScene/> */}
-        <Island/>
+        {/* <Timer /> */}
+        <Homepage />
       </div>
     );
   }
