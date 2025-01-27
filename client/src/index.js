@@ -4,11 +4,13 @@ import './index.css';
 import { Timer } from './Timer';
 import { ThreeScene } from './AirCraft';
 import { Homepage } from './Home';
+import { Project }  from './Project'
 function App() {
     return (
-      <div>
-        {/* <Timer /> */}
+      <div id="main-section">
         <Homepage />
+        <ThreeScene  id="aircraft"/>
+        <Project />
       </div>
     );
   }

@@ -34,6 +34,8 @@ const Homepage = ()=>{
     
         }, [])
 
+        
+
     return(
         <div id="home-section">
              <div id="logo">
@@ -50,6 +52,48 @@ const Homepage = ()=>{
                 <div id="i_4">Developer</div>
                 <div id="i_5">
                     <button id="contact">CONTACT</button>
+                </div>
+             </div>
+             <div id="infinite-roll">
+                <div id="logos_slide">
+                    <img alt="Java" src="./Logos/java.png" />
+                    <img alt="Blender" src="./Logos/Blender.png" />
+                    <img alt="CSS" src="./Logos/CSS-Logo.png" />
+                    <img alt="D3" src="./Logos/D3.png" />
+                    <img alt="HTML5" src="./Logos/HTML5.png" />
+                    <img alt="Javascript" src="./Logos/Javascript.png" />
+                    <img alt="Mongodb" src="./Logos/mongodb.png" />
+                    <img alt="MS-Office" src="./Logos/MS_office.png" />
+                    <img alt="MySQL" src="./Logos/MySQL.png" />
+                    <img alt="Nodejs" src="./Logos/Nodejs.png" />
+                    <img alt="PSQL" src="./Logos/PSQL.png" />
+                    <img alt="Python" src="./Logos/Python.png" />
+                    <img alt="React" src="./Logos/React.png" />
+                    <img alt="Three" src="./Logos/Three.png" />
+                    <img alt="Canva" src="./Logos/Canva.png" />
+                    <img alt="Bootstrap" src="./Logos/Bootstrap.png" />
+                    <img alt="Figma" src="./Logos/Figma.svg" />
+                    
+                </div>
+                <div id="logos_slide">
+                    <img alt="Java" src="./Logos/java.png" />
+                    <img alt="Blender" src="./Logos/Blender.png" />
+                    <img alt="CSS" src="./Logos/CSS-Logo.png" />
+                    <img alt="D3" src="./Logos/D3.png" />
+                    <img alt="HTML5" src="./Logos/HTML5.png" />
+                    <img alt="Javascript" src="./Logos/Javascript.png" />
+                    <img alt="Mongodb" src="./Logos/mongodb.png" />
+                    <img alt="MS-Office" src="./Logos/MS_office.png" />
+                    <img alt="MySQL" src="./Logos/MySQL.png" />
+                    <img alt="Nodejs" src="./Logos/Nodejs.png" />
+                    <img alt="PSQL" src="./Logos/PSQL.png" />
+                    <img alt="Python" src="./Logos/Python.png" />
+                    <img alt="React" src="./Logos/React.png" />
+                    <img alt="Three" src="./Logos/Three.png" />
+                    <img alt="Canva" src="./Logos/Canva.png" />
+                    <img alt="Bootstrap" src="./Logos/Bootstrap.png" />
+                    <img alt="Figma" src="./Logos/Figma.svg" />
+                    
                 </div>
              </div>
         </div>

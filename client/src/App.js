@@ -5,6 +5,8 @@ const app = express();
 // Serve static files from the React app's build folder
 app.use(express.static(path.join(__dirname, 'client', 'build')));
 
+app.use('/static', express.static(path.join(__dirname, 'Logos')));
+
 // Serve the React index.html for any other route
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));

@@ -1,10 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family: "Electrolize", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 body {
-    background: linear-gradient(to right, #ecf38e 15%, #f397df); /* Gradient from left to right */
+    background: linear-gradient(to right, #e9eea5 15%, #f1b1e4); /* Gradient from left to right */
     min-height: 100vh; /* Ensure it covers the full viewport height */
     margin: 0;
+}
+#aircraft{
+    position: absolute;
+    top:0px;
+    right:0px;
+    z-index: -1;
 }
