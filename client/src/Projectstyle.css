@@ -1,42 +1,314 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
 
-#project-section{
+iframe {
+    transition: left 1.5s ease-in-out, right 1.5s ease-in-out, height 1.5s ease-in-out, width 1.5s ease-in-out;
+}
+
+#project-section {
     position: relative;
-    margin-top:130px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    width:100%;
+    width: 100%;
     text-align: center;
 
 }
-#title{
+
+#title {
     font-family: "Rubik Wet Paint", serif;
     font-weight: 400;
-    font-size:70px;
+    color: rgb(240, 145, 3);
+    text-shadow: 2px 2px 5px rgb(149, 146, 146);
+    font-size: 50px;
 }
-#options{
+
+#options {
     display: flex;
     width: 100%;
     justify-content: center;
 }
-#options button{
+
+#options button {
     position: relative;
-    margin: 80px 20px;
-    padding:10px 20px;
+    margin: 50px 20px;
+    padding: 10px 20px;
     font-size: 25px;
     border-radius: 20px;
+    border: none;
     box-shadow: inset 0 5px 10px black;
-    background-color: rgba(200,200,200,0.3);
+    background-color: rgba(255, 140, 0, 0.3);
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transition: all 1s ease;
 }
-#options button:hover{
-    box-shadow:0 5px 10px black;
+
+#options button:hover {
+    background-color: rgb(255, 119, 0);
+    box-shadow: 0 5px 10px black;
 }
-#options #button-active{
-    box-shadow:0 5px 10px black;
+
+#options .active {
+    box-shadow: 0 5px 10px black;
+    background-color: rgb(255, 119, 0);
+}
+
+#project-card {
+    position: relative;
+    display: flex;
+    margin: 0px 0;
+    margin-left: -30px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-items: center;
+    height: 500px;
+}
+
+#project-card::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0)10%, #e9eea5);
+}
+
+#project-card::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0)10%, #f1b1e4);
+}
+
+#project-card .card {
+    position: absolute;
+    flex-shrink: 0;
+    width: 230px;
+    height: 350px;
+    background-color: rgb(135, 177, 180);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: left 1.5s ease-in-out, right 1.5s ease-in-out, height 1.5s ease-in-out, width 1.5s ease-in-out;
+}
+
+#project-card .card-3 {
+    width: 370px;
+    height: 470px;
+}
+
+#project-card .card-2,
+#project-card .card-4 {
+    opacity: 0.5;
+    width: 270px;
+    height: 400px;
+}
+
+#project-card .card-1,
+#project-card .card-5 {
+    opacity: 0.2;
+}
+
+/* project info card-3 */
+.card-3 iframe {
+    width: 370px;
+    height: 200px;
+}
+
+.card-3 #p-title {
+    margin: 10px;
+}
+
+.card-3 #p-stack {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-3 #p-stack p {
+    font-weight: bold;
+}
+
+.card-3 #line-left,
+#line-right {
+    width: 100px;
+    height: 5px;
+    background-color: black;
+}
+
+.card-3 #p-res {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.card-3 #p-res p {
+    padding: 5px 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.card-3 #p-detail {
+    white-space: normal;
+    margin: 15px;
+    text-align: justify;
+}
+
+.card-3 #b-detail {
+    position: absolute;
+    bottom: 10px;
+    left: 150px;
+    padding: 6px 12px;
+    background-color: rgb(135, 177, 180);
+    border: none;
+    border-radius: 15px;
+
+}
+
+.card-3 #b-detail:hover {
+    background-color: rgb(1, 171, 184);
+}
+
+/* project info card-2,card-4 */
+.card-2 iframe,
+.card-4 iframe {
+    width: 270px;
+    height: 150px;
+}
+
+.card-2 #p-title,
+.card-4 #p-title {
+    margin: 10px;
+    font-size: 25px;
+}
+
+.card-2 #p-stack,
+.card-4 #p-stack {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.card-2 #p-stack p,
+.card-4 #p-stack p {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.card-2 #line-left,
+.card-2 #line-right,
+.card-4 #line-left,
+.card-4 #line-right {
+    width: 70px;
+    height: 5px;
+    background-color: black;
+}
+
+.card-2 #p-res,
+.card-4 #p-res {
+    margin-top: 10px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.card-2 #p-res p,
+.card-4 #p-res p {
+    padding: 4px 8px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.card-2 #p-detail,
+.card-4 #p-detail {
+    white-space: normal;
+    font-size: 15px;
+    margin: 12px;
+    text-align: justify;
+}
+
+.card-2 #b-detail,
+.card-4 #b-detail {
+    display: none;
+
+}
+
+/* project info card-1,card-5 */
+.card-1 iframe,
+.card-5 iframe {
+    width: 230px;
+    height: 100px;
+}
+
+.card-1 #p-title,
+.card-5 #p-title {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.card-1 #p-stack,
+.card-5 #p-stack {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.card-1 #p-stack p,
+.card-5 #p-stack p {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.card-1 #line-left,
+.card-1 #line-right,
+.card-5 #line-left,
+.card-5 #line-right {
+    width: 50px;
+    height: 5px;
+    background-color: black;
+}
+
+.card-1 #p-res,
+.card-5 #p-res {
+    margin-top: 10px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.card-1 #p-res p,
+.card-5 #p-res p {
+    padding: 4px 8px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.card-1 #p-detail,
+.card-5 #p-detail {
+    white-space: normal;
+    font-size: 12px;
+    margin: 15px;
+    line-height: 20px;
+    text-align: justify;
+}
+
+.card-1 #b-detail,
+.card-5 #b-detail {
+    display: none;
 }

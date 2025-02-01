@@ -1,62 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
 
-#logo{
+#logo {
     margin-top: 3%;
     margin-left: 8%;
-    width:250px;
-    height:150px;
+    width: 250px;
+    height: 150px;
 }
 
-#l-top, #l-bottom{
+#l-top,
+#l-bottom {
     font-family: "Rubik Wet Paint", serif;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
 }
 
-#l-top{
-    color:rgb(255, 174, 0);
+#l-top {
+    color: rgb(255, 174, 0);
     font-size: 50px;
-    
+
 }
-#l-bottom{
-    margin-top:-20px;
+
+#l-bottom {
+    margin-top: -20px;
     font-size: 35px;
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
-#main_info{
-    margin-top: 7%;
+
+#main_info {
+    margin-top: 50px;
     margin-left: 8%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
-#i_1{
+
+#i_1 {
     font-size: 40px;
     font-weight: 500;
 }
-#i_2{
+
+#i_2 {
     font-size: 50px;
     font-weight: 600;
 }
-#i_3{
-    display:flex;
+
+#i_3 {
+    display: flex;
     flex-direction: row;
     gap: 20px;
     text-align: center;
     align-items: center;
 }
-#i_3_1{
+
+#i_3_1 {
     font-size: 50px;
     font-weight: 500;
 }
-#i_3_2{
+
+#i_3_2 {
     font-family: "Rubik Wet Paint", serif;
     font-size: 80px;
-    font-weight: 900;
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+    color: rgb(222, 64, 64);
+    font-weight: 400;
+    text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.7);
 }
-#i_4{
+
+#i_4 {
     font-size: 70px;
     font-weight: 500;
 }
@@ -65,60 +75,70 @@
     background-color: rgb(248, 142, 3);
     border: 1px solid rgba(0, 0, 0, 0.1);
     font-size: 30px;
-    padding:7px 15px;
+    padding: 7px 15px;
     border-radius: 10px;
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
-#contact:hover{
-         box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.8);
-         background-color: wheat;
-         color: rgb(94, 73, 7);
+
+#contact:hover {
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.8);
+    background-color: wheat;
+    color: rgb(94, 73, 7);
 }
+
 @keyframes slide {
-    from{
-        transform:translate(0);
+    from {
+        transform: translate(0);
     }
-    to{
-        transform:translate(-100%);
+
+    to {
+        transform: translate(-100%);
     }
 }
 
-#infinite-roll{
-    overflow:hidden;
-    margin-top: 110px;
-    padding:10px 0;
-    height:100%;
+#infinite-roll {
+    overflow: hidden;
+    margin-top: 100px;
+    padding: 10px 0;
+    height: 100%;
     /* background: rgba(255, 255, 255, 1); */
     white-space: nowrap;
     position: relative;
 }
-#infinite-roll:before, #infinite-roll:after{
+
+#infinite-roll:before,
+#infinite-roll:after {
     position: absolute;
     top: 0;
     width: 250px;
-    height:100%;
-    content:"";
-    z-index:2;
+    height: 100%;
+    content: "";
+    z-index: 2;
 }
-#infinite-roll:before{
-    left:0;
-    background: linear-gradient(to left, rgba(255,255,255,0), #e9eea5);
-    
+
+#infinite-roll:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #e9eea5);
+
 }
-#infinite-roll:after{
-    right:0;
-    background: linear-gradient(to right, rgba(255,255,255,0), #f1b1e4);
-    
+
+#infinite-roll:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #f1b1e4);
+
 }
+
 #infinite-roll:hover #logos_slide {
     animation-play-state: paused;
 }
+
 #logos_slide {
     animation: 15s slide infinite linear;
-    display:inline-block;
+    display: inline-block;
 }
-#logos_slide img{
-    height:50px;
+
+#logos_slide img {
+    height: 50px;
     margin: 0px 25px;
 }
