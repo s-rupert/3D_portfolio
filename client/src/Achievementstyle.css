@@ -21,6 +21,13 @@ iframe {
     text-shadow: 2px 2px 5px rgb(149, 146, 146);
     font-size: 50px;
 }
+#Achbackground{
+    position:absolute;
+    height: 98vh;
+    width:100vw;
+    z-index:-100;
+    opacity: 0.6;
+}
 
 /* d3 */
 #y-axis{
