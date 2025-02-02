@@ -14,7 +14,12 @@ const Project = () => {
         "#008B8B", // Dark Cyan
         "#8B4513"  // Chocolate
     ]
-    const [locations, setlocations] = useState([-10, 280, 610, 1040, 1370]);
+
+    let screenWidth = window.screen.width;
+    const padding = screenWidth*4/100;
+
+    const [locations, setlocations] = useState([((screenWidth/2)-185)-500-(padding*2), ((screenWidth/2)-185)-270-padding, ((screenWidth/2)-185), ((screenWidth/2)-185)+370+padding, ((screenWidth/2)-185)+640+(padding*2)]);
+    console.log(locations)
     const [positions, setPositions] = useState([1, 2, 3, 4, 5])
 
 
