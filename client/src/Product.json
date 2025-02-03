@@ -1,6 +1,7 @@
 [
     {
         "name":"Personal Portfolio 2018",
+        "type":"Javascript",
         "language":["HTML","CSS","JavaScript"],
         "url":"https://www.youtube.com/embed/JjpklAbPncU?si=3ngkKH1Q21rwWXiz",
         "description":"A responsive portfolio website featuring my projects, skills, and experience. Built with a clean UI, smooth animations, and interactive elements. ",
@@ -8,6 +9,7 @@
     },
     {
         "name":"Personal Portfolio 2018",
+        "type":"Javascript",
         "language":["HTML","CSS","JavaScript"],
         "url":"https://www.youtube.com/embed/JjpklAbPncU?si=3ngkKH1Q21rwWXiz",
         "description":"A responsive portfolio website featuring my projects, skills, and experience. Built with a clean UI, smooth animations, and interactive elements. ",
@@ -15,20 +17,39 @@
     },
     {
         "name":"Miniool",
+        "type":"Javascript",
         "language":["HTML","CSS","JavaScript"],
         "url":"https://www.youtube.com/embed/GTRDnNwWTmA?si=hiBmayoO_k2puSrF",
         "description":"An e-commerce platform for hand-knitted mini toys, built as a college project with a fully responsive design.",
         "detail":"empty"
     },
     {
-        "name":"Jovian",
+        "name":"Jovian Job",
+        "type":"Javascript",
         "language":["HTML","CSS","JavaScript", "Bootstrap"],
         "url":"https://www.youtube.com/embed/7KVZ-F7bod8?si=Ymrea3AoyIMXJJ9i",
         "description":"A job listing website with a responsive design, allowing users to explore job opportunities and applications effortlessly.",
         "detail":"empty"
     },
     {
-        "name":"Jovian",
+        "name":"Jovian Application",
+        "type":"Javascript",
+        "language":["HTML","CSS","JavaScript", "Bootstrap", "vercel", "Nodemon"],
+        "url":"https://www.youtube.com/embed/trOVyd_STDo?si=8nJ98fr3A_4E_Qk9",
+        "description":"A responsive job portal showcasing real-time job listings with an intuitive UI for a smooth browsing experience.",
+        "detail":"empty"
+    },
+    {
+        "name":"Jovian Application",
+        "type":"Javascript",
+        "language":["HTML","CSS","JavaScript", "Bootstrap", "vercel", "Nodemon"],
+        "url":"https://www.youtube.com/embed/trOVyd_STDo?si=8nJ98fr3A_4E_Qk9",
+        "description":"A responsive job portal showcasing real-time job listings with an intuitive UI for a smooth browsing experience.",
+        "detail":"empty"
+    },
+    {
+        "name":"Jovian Application",
+        "type":"Javascript",
         "language":["HTML","CSS","JavaScript", "Bootstrap", "vercel", "Nodemon"],
         "url":"https://www.youtube.com/embed/trOVyd_STDo?si=8nJ98fr3A_4E_Qk9",
         "description":"A responsive job portal showcasing real-time job listings with an intuitive UI for a smooth browsing experience.",

@@ -6,7 +6,7 @@ iframe {
 
 #project-section {
     position: relative;
-    margin-top: 10px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -113,6 +113,64 @@ iframe {
     opacity: 0.2;
 }
 
+/* project info card-1,card-5 */
+.card iframe {
+    width: 230px;
+    height: 100px;
+}
+
+.card #p-title{
+    margin: 10px;
+    font-size: 20px;
+}
+
+.card #p-stack{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.card #p-stack p{
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.card #line-left,
+.card #line-right {
+    width: 50px;
+    height: 5px;
+    background-color: black;
+}
+
+.card #p-res {
+    margin-top: 10px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.card #p-res p {
+    padding: 4px 8px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.card #p-detail {
+    white-space: normal;
+    font-size: 12px;
+    margin: 15px;
+    line-height: 20px;
+    text-align: justify;
+}
+
+.card #b-detail {
+    display: none;
+}
+
 /* project info card-3 */
 .card-3 iframe {
     width: 370px;
@@ -121,6 +179,7 @@ iframe {
 
 .card-3 #p-title {
     margin: 10px;
+    font-size: 30px;
 }
 
 .card-3 #p-stack {
@@ -132,9 +191,10 @@ iframe {
 
 .card-3 #p-stack p {
     font-weight: bold;
+    font-size:25px;
 }
 
-.card-3 #line-left,
+.card-3 #line-left,.card-3
 #line-right {
     width: 100px;
     height: 5px;
@@ -147,6 +207,7 @@ iframe {
     align-items: center;
     justify-content: center;
     gap: 5px;
+    font-size: 15px;
     flex-wrap: wrap;
 }
 
@@ -159,10 +220,13 @@ iframe {
 .card-3 #p-detail {
     white-space: normal;
     margin: 15px;
+    font-size:15px;
     text-align: justify;
 }
 
 .card-3 #b-detail {
+    display: block;
+    font-size:15px;
     position: absolute;
     bottom: 10px;
     left: 150px;
@@ -245,70 +309,3 @@ iframe {
 
 }
 
-/* project info card-1,card-5 */
-.card-1 iframe,
-.card-5 iframe {
-    width: 230px;
-    height: 100px;
-}
-
-.card-1 #p-title,
-.card-5 #p-title {
-    margin: 10px;
-    font-size: 20px;
-}
-
-.card-1 #p-stack,
-.card-5 #p-stack {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: center;
-}
-
-.card-1 #p-stack p,
-.card-5 #p-stack p {
-    font-weight: bold;
-    font-size: 12px;
-}
-
-.card-1 #line-left,
-.card-1 #line-right,
-.card-5 #line-left,
-.card-5 #line-right {
-    width: 50px;
-    height: 5px;
-    background-color: black;
-}
-
-.card-1 #p-res,
-.card-5 #p-res {
-    margin-top: 10px;
-    font-size: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    flex-wrap: wrap;
-}
-
-.card-1 #p-res p,
-.card-5 #p-res p {
-    padding: 4px 8px;
-    color: rgb(255, 255, 255);
-    border-radius: 10px;
-}
-
-.card-1 #p-detail,
-.card-5 #p-detail {
-    white-space: normal;
-    font-size: 12px;
-    margin: 15px;
-    line-height: 20px;
-    text-align: justify;
-}
-
-.card-1 #b-detail,
-.card-5 #b-detail {
-    display: none;
-}

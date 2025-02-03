@@ -18,16 +18,48 @@ const Project = () => {
     let screenWidth = window.screen.width;
     const padding = screenWidth*4/100;
 
-    const [locations, setlocations] = useState([((screenWidth/2)-185)-500-(padding*2), ((screenWidth/2)-185)-270-padding, ((screenWidth/2)-185), ((screenWidth/2)-185)+370+padding, ((screenWidth/2)-185)+640+(padding*2)]);
-    const [positions, setPositions] = useState([1, 2, 3, 4, 5])
+    const [locations, setlocations] = useState([]);
+    const [positions, setPositions] = useState([])
 
 
     const clickHandler = (btnNum) => {
+        const types = ["All","Javascript","FCC","Database","Others"];
+        const fLocation=[((screenWidth/2)-185)-500-(padding*2), ((screenWidth/2)-185)-270-padding, ((screenWidth/2)-185), ((screenWidth/2)-185)+370+padding, ((screenWidth/2)-185)+640+(padding*2)]
+        let totalData=0;
+        let positionArray=[];
+        let locationArray=[]
         const buttons = document.querySelectorAll("#options button");
         buttons.forEach((button) => button.classList.remove("active"));
         buttons[btnNum - 1].classList.add("active");
+        if(btnNum==1){
+            if(Product.length==1){
+                locationArray.push((screenWidth/2)-185);
+                positionArray.push(3);
+            }else if(Product.length==2){
+                positionArray.push(2,3)
+                locationArray.push((screenWidth/2)-185-padding-270,(screenWidth/2)-185);
+            }else if(Product.length<=5){
+                for(let i=0;i<Product.length;i++){
+                    positionArray.push(i+1);
+                    locationArray.push(fLocation[i]);
+                }
+            }else{
+                for(let i=0;i<5;i++){
+                    positionArray.push(i+1);
+                    locationArray.push(fLocation[i]);
+                }
+                for(let i=0;i<Product.length-5;i++){
+                    positionArray.push(i+5);
+                    locationArray.push((((screenWidth/2)-185)+640+(padding*3+1)+(230*(i+1))));
+                }
+            }
+        }
+        setlocations(locationArray);
+        setPositions(positionArray);
     }
-
+    useEffect(()=>{
+        clickHandler(1)
+    },[])
     const cardClickHandler = (btnNum) => {
         const cards = document.querySelectorAll(".card");
         if (btnNum === 2) {
@@ -101,9 +133,9 @@ const Project = () => {
 
     // Createing project cards
     const divs = [];
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < positions.length; i++) {
         divs.push(
-            <div className={`card card-${i + 1}`} onClick={() => cardClickHandler(positions[i])}>
+            <div className={`card card-${positions[i]}`} onClick={() => cardClickHandler(positions[i])}>
                 <iframe src={Product[i].url} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                 <h1 id="p-title">{Product[i].name}</h1>
                 <div id="p-stack">
@@ -131,8 +163,8 @@ const Project = () => {
                 <button className="button active" onClick={() => clickHandler(1)}>All</button>
                 <button className="button" onClick={() => clickHandler(2)}>JavaScript</button>
                 <button className="button" onClick={() => clickHandler(3)}>Database</button>
-                <button className="button" onClick={() => clickHandler(4)}>Blender</button>
-                <button className="button" onClick={() => clickHandler(5)}>Java</button>
+                <button className="button" onClick={() => clickHandler(4)}>FreeCodeCamp</button>
+                <button className="button" onClick={() => clickHandler(5)}>Others</button>
             </div>
             <div id="project-card">
                 {divs}
