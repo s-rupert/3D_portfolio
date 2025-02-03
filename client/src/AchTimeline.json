@@ -2,26 +2,31 @@
   {
     "name":["Diploma in Computer Application","started High School", "Beginning of IT Career","started working as an Administrative Assistant"],
     "year":2018,
+    "img":"./Scrolls/Scrollopen1.png",
     "detail":"null"
   },
   { 
     "name":["Started Working as a Graphic Designer","Started Bechelor in Computer Application"],
     "year":2020,
+    "img":"./Scrolls/Scrollopen2.png",
     "detail":"null"
   },
   {
     "name":["Completed IELTS Training","Came to Canada for Higher Studies"],
     "year":2022,
+    "img":"./Scrolls/Scrollopen3.png",
     "detail":"null"
   },
   {
     "name":["Completed FreeCodeCamp Training","Build Portfolio Website","Learn New Programming Language"],
     "year":2024,
+    "img":"./Scrolls/Scrollopen4.png",
     "detail":"null"
   },
   {
     "name":["Looking for Internship or Job in IT sector"],
     "year":2025,
+    "img":"./Scrolls/Scrollopen5.png",
     "detail":"null"
   },
   {

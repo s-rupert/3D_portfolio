@@ -19,7 +19,6 @@ const Project = () => {
     const padding = screenWidth*4/100;
 
     const [locations, setlocations] = useState([((screenWidth/2)-185)-500-(padding*2), ((screenWidth/2)-185)-270-padding, ((screenWidth/2)-185), ((screenWidth/2)-185)+370+padding, ((screenWidth/2)-185)+640+(padding*2)]);
-    console.log(locations)
     const [positions, setPositions] = useState([1, 2, 3, 4, 5])
 
 

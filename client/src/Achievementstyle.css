@@ -5,12 +5,12 @@ iframe {
 }
 
 #achievement-section {
-    position: relative;
     margin-top: 90px;
     display: flex;
     flex-direction: column;
     width: 100%;
     text-align: center;
+    position: relative;
 
 }
 
@@ -18,16 +18,12 @@ iframe {
     font-family: "Rubik Wet Paint", serif;
     font-weight: 400;
     color: rgb(240, 145, 3);
-    text-shadow: 2px 2px 5px rgb(149, 146, 146);
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
     font-size: 50px;
 }
-#Achbackground{
-    position:absolute;
-    object-fit: cover;
-    height: 100vh;
-    width:100vw;
-    z-index:-100;
-    opacity: 0.6;
+#a-detail{
+    position: relative;
+    font-size: 25px;
 }
 
 /* d3 */
@@ -42,4 +38,10 @@ iframe {
 #Cscroll{
     transform: rotate(-1deg);
     transition: left 1.5s ease-in-out, right 1.5s ease-in-out, height 1.5s ease-in-out, width 1.5s ease-in-out;
+    z-index:1;
+}
+#Oscroll{
+    transform: rotate(-1deg);
+    transition: left 1.5s ease-in-out, right 1.5s ease-in-out, height 1.5s ease-in-out, width 1.5s ease-in-out;
+    z-index:20;
 }

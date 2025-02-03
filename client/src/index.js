@@ -9,6 +9,7 @@ import { Achievement } from './Achievement';
 function App() {
   return (
     <div id="main-section">
+      <img id="background" src="Background.png" />
       <Homepage />
       <ThreeScene id="aircraft" />
       <Project />
