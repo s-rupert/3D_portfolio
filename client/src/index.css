@@ -19,7 +19,8 @@ body {
 #background{
   position:absolute;
   width: 100vw;
-  z-index:-20;
+  z-index:20;
+  pointer-events: none;
   top:60px;
 }
 #aircraft{

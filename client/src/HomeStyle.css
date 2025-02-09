@@ -71,6 +71,11 @@
     font-weight: 500;
 }
 
+#i_5 {
+    z-index: 22;
+
+}
+
 #contact {
     background-color: rgb(248, 142, 3);
     border: 1px solid rgba(0, 0, 0, 0.1);

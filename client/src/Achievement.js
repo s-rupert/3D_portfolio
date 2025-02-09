@@ -18,7 +18,6 @@ const Achievement = () => {
 }
 
 const Chart = () => {
-  // const chartRef = useRef(null);
   useEffect(() => {
     let screenWidth = window.screen.width;
     let screenHeight = window.screen.height;
@@ -125,49 +124,5 @@ const Chart = () => {
 
 
 };
-// Threedflag
-// const ThreeFlag = ({ id }) => {
-//   useEffect(() => {
-//     const camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 100);
-//     camera.position.z = 10;
-
-//     const scene = new THREE.Scene();
-//     scene.background = null;
-
-//     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-//     renderer.setSize(window.innerWidth, window.innerHeight);  // Use the full window size or adjust as needed
-
-//     const ambientLight = new THREE.AmbientLight(0xffffff, 5);
-//     scene.add(ambientLight);
-
-//     const canvasElement = document.getElementById(id);
-//     if (canvasElement) {
-//       canvasElement.appendChild(renderer.domElement);
-//     }
-//     const loader = new GLTFLoader();
-//     loader.load('/golf_flag.glb', (gltf) => {
-//       gltf.scene.rotation.set(1,3.4,0);
-//       gltf.scene.scale.set(0.05,0.05,0.05);
-//       scene.add(gltf.scene);
-//     }, undefined, (error) => {
-//       console.error('An error occurred loading the GLTF model:', error);
-//     });
-
-//     // Animation loop
-//     const animate = () => {
-//       requestAnimationFrame(animate);
-//       renderer.render(scene, camera);
-//     };
-//     animate();
-
-//     return () => {
-//       if (canvasElement) {
-//         canvasElement.removeChild(renderer.domElement);
-//       }
-//     };
-//   }, [id]);
-
-//   return <div id={id} />;
-// };
 
 export { Achievement };

@@ -11,7 +11,7 @@ function App() {
     <div id="main-section">
       <img id="background" src="Background.png" />
       <Homepage />
-      <ThreeScene id="aircraft" />
+      {/* <ThreeScene id="aircraft" /> */}
       <Project />
       <Achievement />
     </div>

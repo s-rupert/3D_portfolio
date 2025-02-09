@@ -28,20 +28,23 @@ iframe {
 
 /* d3 */
 #y-axis{
+    
     color:rgb(143, 63, 3);
     stroke-width: 5px;
     font-size: 19px;
 }
 #flag{
+    
+    z-index: 20;
     transform: scaleX(-1) rotate(-35deg);    
 }
 #Cscroll{
     transform: rotate(-1deg);
     transition: left 1.5s ease-in-out, right 1.5s ease-in-out, height 1.5s ease-in-out, width 1.5s ease-in-out;
-    z-index:1;
+    z-index:20;
 }
 #Oscroll{
     transform: rotate(-1deg);
     transition: left 1.5s ease-in-out, right 1.5s ease-in-out, height 1.5s ease-in-out, width 1.5s ease-in-out;
-    z-index:20;
+    z-index:21;
 }

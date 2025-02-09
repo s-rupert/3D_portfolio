@@ -99,6 +99,7 @@ iframe {
 #project-card .card-3 {
     width: 370px;
     height: 470px;
+    z-index: 22;
 }
 
 #project-card .card-2,
