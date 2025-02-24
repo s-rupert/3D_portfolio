@@ -25,7 +25,7 @@ const Project = () => {
 
     const clickHandler = (btnNum) => {
         const types = ["All", "Javascript", "Database", "FCC", "Others"];
-        const fLocation = [((screenWidth / 2) - 185) - 500 - (padding * 2), ((screenWidth / 2) - 185) - 270 - padding, ((screenWidth / 2) - 185), ((screenWidth / 2) - 185) + 370 + padding, ((screenWidth / 2) - 185) + 640 + (padding * 2)]
+        const fLocation = [((screenWidth / 2) - ((screenWidth*36)/100)) - (padding * 2), ((screenWidth / 2) - ((screenWidth*24)/100)) - padding, ((screenWidth / 2) - ((screenWidth*10)/100)), ((screenWidth / 2) + ((screenWidth*10)/100)) + padding, ((screenWidth / 2) + ((screenWidth*24)/100)) + (padding * 2)]
         let totalData = 0;
         let positionArray = [];
         let locationArray = []
@@ -35,11 +35,11 @@ const Project = () => {
         if (btnNum == 1) {
             setProject(Product)
             if (Product.length == 1) {
-                locationArray.push((screenWidth / 2) - 185);
+                locationArray.push((screenWidth / 2) - ((screenWidth*10)/100));
                 positionArray.push(3);
             } else if (Product.length == 2) {
                 positionArray.push(2, 3)
-                locationArray.push((screenWidth / 2) - 185 - padding - 270, (screenWidth / 2) - 185);
+                locationArray.push((screenWidth / 2) - ((screenWidth*24)/100) - padding, ((screenWidth / 2) - ((screenWidth*10)/100)));
             } else if (Product.length <= 5) {
                 for (let i = 0; i < Product.length; i++) {
                     positionArray.push(i + 1);
@@ -52,7 +52,7 @@ const Project = () => {
                 }
                 for (let i = 0; i < Product.length - 5; i++) {
                     positionArray.push(i + 5);
-                    locationArray.push((((screenWidth / 2) - 185) + 640 + (padding * 3 + 1) + (230 * (i + 1))));
+                    locationArray.push((screenWidth / 2) + ((screenWidth*36)/100) + (padding*i)+(((screenWidth*12)/100) * (i + 1)));
                 }
             }
         } else {
@@ -64,11 +64,11 @@ const Project = () => {
             }
             setProject(Matched);
             if (Matched.length == 1) {
-                locationArray.push((screenWidth / 2) - 185);
+                locationArray.push((screenWidth / 2) - ((screenWidth*10)/100));
                 positionArray.push(3);
             } else if (Matched.length == 2) {
                 positionArray.push(2, 3)
-                locationArray.push((screenWidth / 2) - 185 - padding - 270, (screenWidth / 2) - 185);
+                locationArray.push((screenWidth / 2) - ((screenWidth*24)/100) - padding, ((screenWidth / 2) - ((screenWidth*10)/100)));
             } else if (Matched.length <= 5) {
                 for (let i = 0; i < Matched.length; i++) {
                     positionArray.push(i + 1);
@@ -81,7 +81,7 @@ const Project = () => {
                 }
                 for (let i = 0; i < Matched.length - 5; i++) {
                     positionArray.push(i + 5);
-                    locationArray.push((((screenWidth / 2) - 185) + 640 + (padding * 3 + 1) + (230 * (i + 1))));
+                    locationArray.push((screenWidth / 2) + ((screenWidth*36)/100) + (padding*i)+(((screenWidth*12)/100) * (i + 1)));
                 }
             }
         }

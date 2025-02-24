@@ -16,16 +16,3 @@ body {
     min-height: 100vh; /* Ensure it covers the full viewport height */
     margin: 0;
 }
-#background{
-  position:absolute;
-  width: 100vw;
-  z-index:20;
-  pointer-events: none;
-  top:60px;
-}
-#aircraft{
-    position: absolute;
-    top:0px;
-    right:0px;
-    z-index: -1;
-}

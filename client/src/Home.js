@@ -12,7 +12,7 @@ const Homepage = ()=>{
         "Software...   "
     ]
     const [ i_3_2, set_i_3_2] = useState(i_3_2_Array[0])
-
+    
         useEffect(() => {
             function randomNumberGenerator(){
                 const number = Math.floor(Math.random() * i_3_2_Array.length);
