@@ -17,6 +17,15 @@ const Project = () => {
 
     let screenWidth = window.screen.width;
     const padding = screenWidth * 4 / 100;
+    let fLocation;
+    let overFive;
+    if (screenWidth <= 700) {
+        fLocation = [((screenWidth / 2) - ((screenWidth * 95) / 100)) - (padding * 2), ((screenWidth / 2) - ((screenWidth * 65) / 100)) - padding, ((screenWidth / 2) - ((screenWidth * 25) / 100)), ((screenWidth / 2) + ((screenWidth * 25) / 100)) + padding, ((screenWidth / 2) + ((screenWidth * 65) / 100)) + (padding * 2)]
+        overFive = [(screenWidth / 2) + ((screenWidth * 77) / 100), ((screenWidth * 30) / 100)]
+    } else {
+        fLocation = [((screenWidth / 2) - ((screenWidth * 36) / 100)) - (padding * 2), ((screenWidth / 2) - ((screenWidth * 24) / 100)) - padding, ((screenWidth / 2) - ((screenWidth * 10) / 100)), ((screenWidth / 2) + ((screenWidth * 10) / 100)) + padding, ((screenWidth / 2) + ((screenWidth * 24) / 100)) + (padding * 2)]
+        overFive = [(screenWidth / 2) + ((screenWidth * 36) / 100), ((screenWidth * 12) / 100)]
+    }
 
     const [locations, setlocations] = useState([]);
     const [positions, setPositions] = useState([])
@@ -25,7 +34,7 @@ const Project = () => {
 
     const clickHandler = (btnNum) => {
         const types = ["All", "Javascript", "Database", "FCC", "Others"];
-        const fLocation = [((screenWidth / 2) - ((screenWidth*36)/100)) - (padding * 2), ((screenWidth / 2) - ((screenWidth*24)/100)) - padding, ((screenWidth / 2) - ((screenWidth*10)/100)), ((screenWidth / 2) + ((screenWidth*10)/100)) + padding, ((screenWidth / 2) + ((screenWidth*24)/100)) + (padding * 2)]
+
         let totalData = 0;
         let positionArray = [];
         let locationArray = []
@@ -35,11 +44,11 @@ const Project = () => {
         if (btnNum == 1) {
             setProject(Product)
             if (Product.length == 1) {
-                locationArray.push((screenWidth / 2) - ((screenWidth*10)/100));
+                locationArray.push(fLocation[2]);
                 positionArray.push(3);
             } else if (Product.length == 2) {
                 positionArray.push(2, 3)
-                locationArray.push((screenWidth / 2) - ((screenWidth*24)/100) - padding, ((screenWidth / 2) - ((screenWidth*10)/100)));
+                locationArray.push(fLocation[1], fLocation[2]);
             } else if (Product.length <= 5) {
                 for (let i = 0; i < Product.length; i++) {
                     positionArray.push(i + 1);
@@ -52,7 +61,7 @@ const Project = () => {
                 }
                 for (let i = 0; i < Product.length - 5; i++) {
                     positionArray.push(i + 5);
-                    locationArray.push((screenWidth / 2) + ((screenWidth*36)/100) + (padding*i)+(((screenWidth*12)/100) * (i + 1)));
+                    locationArray.push(overFive[0] + (overFive[1] * (i+1)) + (padding * (i)));
                 }
             }
         } else {
@@ -64,11 +73,11 @@ const Project = () => {
             }
             setProject(Matched);
             if (Matched.length == 1) {
-                locationArray.push((screenWidth / 2) - ((screenWidth*10)/100));
+                locationArray.push(fLocation[2]);
                 positionArray.push(3);
             } else if (Matched.length == 2) {
                 positionArray.push(2, 3)
-                locationArray.push((screenWidth / 2) - ((screenWidth*24)/100) - padding, ((screenWidth / 2) - ((screenWidth*10)/100)));
+                locationArray.push(fLocation[1], fLocation[2]);
             } else if (Matched.length <= 5) {
                 for (let i = 0; i < Matched.length; i++) {
                     positionArray.push(i + 1);
@@ -81,7 +90,7 @@ const Project = () => {
                 }
                 for (let i = 0; i < Matched.length - 5; i++) {
                     positionArray.push(i + 5);
-                    locationArray.push((screenWidth / 2) + ((screenWidth*36)/100) + (padding*i)+(((screenWidth*12)/100) * (i + 1)));
+                    locationArray.push(overFive[0] + (overFive[1] * (i+1)) + (padding * (i)));
                 }
             }
         }

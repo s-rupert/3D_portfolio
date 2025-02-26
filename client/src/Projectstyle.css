@@ -312,3 +312,189 @@ iframe {
     display: none;
 
 }
+
+
+
+/* If the screen width is less than 700 or specifically for mobile phones */
+@media (max-width: 700px) {
+    /* #project-section {
+        position: relative;
+        margin-top: 8vw;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    
+    } */
+
+    #title-p {
+        font-size: 7vw;
+    }
+
+    #options button {
+        margin: 3vw 1vw;
+        padding: 0.7vw 1.2vw;
+        font-size: 3vw;
+    }
+
+
+
+    #project-card {
+        height: 70vw;
+    }
+
+    #project-card .card {
+        width: 30vw;
+        height: 45vw;
+    }
+
+    #project-card .card-3 {
+        width: 50vw;
+        height: 65vw;
+    }
+
+    #project-card .card-2,
+    #project-card .card-4 {
+        width: 40vw;
+        height: 55vw;
+    }
+
+    /* project info card-1,card-5 */
+    .card iframe {
+        width: 30vw;
+        height: 16.875vw;
+    }
+
+    .card #p-title {
+        font-size: 3vw;
+    }
+
+    .card #p-stack {
+        gap: 1vw;
+    }
+
+    .card #p-stack p {
+        font-size: 2.5vw;
+    }
+
+    .card #line-left,
+    .card #line-right {
+        width: 6.5vw;
+        height: 0.8vw;
+    }
+
+    .card #p-res {
+        margin-top: 0.5vw;
+        font-size: 1.7vw;
+        gap: 0.8vw;
+    }
+
+    .card #p-res p {
+        padding: 0.5vw 0.8vw;
+    }
+
+    .card #p-detail {
+        font-size: 2vw;
+        margin: 1vw;
+        line-height: 1.9vw;
+        text-align: justify;
+    }
+
+    /* project info card-3 */
+    .card-3 iframe {
+        width: 50vw;
+        height: 28.125vw;
+    }
+
+    .card-3 #p-title {
+        font-size: 4vw;
+    }
+
+    .card-3 #p-stack {
+        gap: 1.5vw;
+    }
+
+    .card-3 #p-stack p {
+        font-size: 3.5vw;
+    }
+
+    .card-3 #line-left,
+    .card-3 #line-right {
+        width: 12vw;
+        height: 1vw;
+    }
+
+    .card-3 #p-res {
+        margin-top: 1vw;
+        gap: 1.5vw;
+        font-size: 2.5vw;
+    }
+
+    .card-3 #p-res p {
+        padding: 0.5vw 1.5vw;
+    }
+
+    .card-3 #p-detail {
+        font-size: 2.5vw;
+        line-height: 2.5vw;
+        margin:1.5vw;
+    }
+
+    .card-3 #b-detail {
+        font-size: 3vw;
+        bottom: 1vw;
+        left: 17vw;
+        padding: 0.7vw 1.5vw;
+
+    }
+
+
+    /* project info card-2,card-4 */
+    .card-2 iframe,
+    .card-4 iframe {
+        width: 40vw;
+        height: 22.5vw;
+    }
+
+    .card-2 #p-title,
+    .card-4 #p-title {
+        font-size: 3.5vw;
+    }
+
+    .card-2 #p-stack,
+    .card-4 #p-stack {
+        gap: 1.5vw;
+    }
+
+    .card-2 #p-stack p,
+    .card-4 #p-stack p {
+        font-size: 2.8vw;
+    }
+
+    .card-2 #line-left,
+    .card-2 #line-right,
+    .card-4 #line-left,
+    .card-4 #line-right {
+        width: 10vw;
+        height: 0.8vw;
+    }
+
+    .card-2 #p-res,
+    .card-4 #p-res {
+        margin-top: 1vw;
+        font-size: 2.5vw;
+        gap: 0.7vw;
+    }
+
+    .card-2 #p-res p,
+    .card-4 #p-res p {
+        padding: 0.5vw 0.8vw;
+    }
+
+    .card-2 #p-detail,
+    .card-4 #p-detail {
+        font-size: 2vw;
+        margin: 1vw;
+        line-height: 2.5vw;
+    }
+}
