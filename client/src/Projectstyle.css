@@ -14,12 +14,12 @@ iframe {
 
 }
 
-#title {
+#title-p {
     font-family: "Rubik Wet Paint", serif;
     font-weight: 400;
     color: rgb(240, 145, 3);
-    text-shadow: 2px 2px 5px rgb(149, 146, 146);
-    font-size: 7vw;
+    text-shadow: 0.1vw 0.1vw 0.3vw rgb(149, 146, 146);
+    font-size: 4vw;
 }
 
 #options {
@@ -35,7 +35,7 @@ iframe {
     font-size: 1vw;
     border-radius: 2vw;
     border: none;
-    box-shadow: inset 0 5px 1vw black;
+    box-shadow: inset 0 0.5vw 1vw black;
     background-color: rgba(255, 140, 0, 0.3);
     display: flex;
     justify-content: center;
@@ -45,11 +45,11 @@ iframe {
 
 #options button:hover {
     background-color: rgb(255, 119, 0);
-    box-shadow: 0 5px 1vw black;
+    box-shadow: 0 0.5vw 1vw black;
 }
 
 #options .active {
-    box-shadow: 0 5px 1vw black;
+    box-shadow: 0 0.5vw 1vw black;
     background-color: rgb(255, 119, 0);
 }
 
@@ -91,13 +91,13 @@ iframe {
     background-color: rgb(135, 177, 180);
     border: 1px solid #ccc;
     border-radius: 1vw;
-    box-shadow: vw 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0vw 0.3vw 0.4vw rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: left 1.5s ease-in-out, right 1.5s ease-in-out, height 1.5s ease-in-out, width 1.5s ease-in-out;
 }
 
 #project-card .card-3 {
-    
+
     width: 20vw;
     height: 24.5vw;
     z-index: 22;
@@ -121,19 +121,19 @@ iframe {
     height: 7vw;
 }
 
-.card #p-title{
+.card #p-title {
     margin: 0.5vw;
     font-size: 1vw;
 }
 
-.card #p-stack{
+.card #p-stack {
     display: flex;
     align-items: center;
     gap: 0.5vw;
     justify-content: center;
 }
 
-.card #p-stack p{
+.card #p-stack p {
     font-weight: bold;
     font-size: 0.7vw;
 }
@@ -141,7 +141,7 @@ iframe {
 .card #line-left,
 .card #line-right {
     width: 3vw;
-    height: 5px;
+    height: 0.3vw;
     background-color: black;
 }
 
@@ -151,12 +151,12 @@ iframe {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 0.3vw;
     flex-wrap: wrap;
 }
 
 .card #p-res p {
-    padding: 4px 8px;
+    padding: 0.3vw 0.4vw;
     color: rgb(255, 255, 255);
     border-radius: 1vw;
 }
@@ -193,13 +193,13 @@ iframe {
 
 .card-3 #p-stack p {
     font-weight: bold;
-    font-size:1vw;
+    font-size: 1vw;
 }
 
-.card-3 #line-left,.card-3
-#line-right {
+.card-3 #line-left,
+.card-3 #line-right {
     width: 6vw;
-    height: 5px;
+    height: 0.3vw;
     background-color: black;
 }
 
@@ -222,21 +222,21 @@ iframe {
 .card-3 #p-detail {
     white-space: normal;
     margin: 0.7vw;
-    font-size:0.8vw;
+    font-size: 0.8vw;
     text-align: justify;
     line-height: 1vw;
 }
 
 .card-3 #b-detail {
     display: block;
-    font-size:1vw;
+    font-size: 1vw;
     position: absolute;
     bottom: 0.5vw;
     left: 7vw;
     padding: 0.3vw 0.5vw;
     background-color: rgb(135, 177, 180);
     border: none;
-    border-radius: 15px;
+    border-radius: 10.3vw;
 
 }
 
@@ -276,7 +276,7 @@ iframe {
 .card-4 #line-left,
 .card-4 #line-right {
     width: 4vw;
-    height: 5px;
+    height: 0.3vw;
     background-color: black;
 }
 
@@ -293,7 +293,7 @@ iframe {
 
 .card-2 #p-res p,
 .card-4 #p-res p {
-    padding: 4px 8px;
+    padding: 0.3vw 0.4vw;
     color: rgb(255, 255, 255);
     border-radius: 1vw;
 }
@@ -312,4 +312,3 @@ iframe {
     display: none;
 
 }
-

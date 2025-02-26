@@ -199,7 +199,7 @@ const Project = () => {
     }
     return (
         <div id="project-section">
-            <p id="title">Project</p>
+            <p id="title-p">Project</p>
             <div id="options">
                 <button className="button active" onClick={() => clickHandler(1)}>All</button>
                 <button className="button" onClick={() => clickHandler(2)}>JavaScript</button>
