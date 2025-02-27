@@ -5,6 +5,14 @@ import { Homepage } from './Home';
 import { Project } from './Project'
 import { Achievement } from './Achievement';
 function App() {
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     window.location.reload();
+  //   }, 10000); // 60000 milliseconds = 1 minute
+
+  //   // Cleanup the interval when the component unmounts
+  //   return () => clearInterval(interval);
+  // }, []);
   useEffect(() => {
     let resizeTimer;
     const handleResize = () => {

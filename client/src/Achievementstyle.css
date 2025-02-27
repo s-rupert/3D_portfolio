@@ -48,3 +48,17 @@ iframe {
     transition: left 1.5s ease-in-out, right 1.5s ease-in-out, height 1.5s ease-in-out, width 1.5s ease-in-out;
     z-index:21;
 }
+#arrowhead{
+    fill:rgb(143, 63, 3);
+    stroke: rgb(143, 63, 3);
+    z-index:-25;
+}
+#line{
+    stroke-width: 10px;
+    fill:none;
+    stroke: rgb(143, 63, 3);
+    z-index:-25;
+}
+#point{
+    z-index:25;
+}
