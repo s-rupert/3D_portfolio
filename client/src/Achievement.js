@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import './Achievementstyle.css';
 import AchTimeline from './AchTimeline.json'
 import * as d3 from 'd3';
-// import * as THREE from 'three'; // Use `* as THREE` to import all THREE.js features
-// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 const Achievement = () => {
 
@@ -23,12 +21,16 @@ const Chart = () => {
     let screenHeight = window.screen.height;
     d3.select("#chart").selectAll("*").remove();
     const parseYear = d3.timeParse("%Y");
-    const height = screenHeight * 95 / 100, width = screenWidth * 95 / 100, padding = 60;
+    const height = screenHeight * 70 / 100, width = screenWidth * 95 / 100, padding = 60;
 
     const svg = d3.select("#chart")
       .append("svg")
       .attr("height", height)
       .attr("width", width);
+    
+    const xScale = d3.scaleLinear()
+      .domain([16,23])
+      .range([50, width-padding]);
 
     const yScale = d3.scaleTime()
       .domain([parseYear(2017), parseYear(2028)])
@@ -112,7 +114,11 @@ const Chart = () => {
 
 
 
-
+      const xAxis = d3.axisBottom(xScale);
+      svg.append("g")
+        .attr("transform", `translate( 10,${height-padding})`)
+        .attr("id", "y-axis")
+        .call(xAxis);
 
     const yAxis = d3.axisLeft(yScale);
     svg.append("g")

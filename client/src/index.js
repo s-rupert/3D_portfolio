@@ -22,7 +22,7 @@ function App() {
     <div id="main-section">
       <Homepage />
       <Project />
-      {/* <Achievement /> */}
+      <Achievement />
     </div>
   );
 }
