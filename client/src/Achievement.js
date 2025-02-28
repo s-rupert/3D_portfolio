@@ -2,17 +2,16 @@ import React, { useEffect } from 'react';
 import './Achievementstyle.css';
 import AchTimeline from './AchTimeline.json'
 import * as d3 from 'd3';
-<<<<<<< HEAD
 
-=======
->>>>>>> 375d357bfd43337b20699f2144a3d8c2e62f5a18
 const Achievement = () => {
   return (
     <div id="achievement-section">
-      <h1 id="title">Achievement</h1>
+      <h1 id="title-a">Achievement</h1>
       <p id="a-detail">Click on each Scroll to see Achievements</p>
       <div id="chart"></div>
-      <Chart />
+      <div id="t-years">Date in Years</div>
+      <Chart id="chart"/>
+      <div id="t-age">Age in Numbers</div>
     </div>
   )
 }
@@ -23,33 +22,46 @@ const Chart = () => {
     let screenHeight = window.screen.height;
     d3.select("#chart").selectAll("*").remove();
     const parseYear = d3.timeParse("%Y");
-<<<<<<< HEAD
-    const height = screenHeight * 70 / 100, width = screenWidth * 95 / 100, padding = 60;
+    let height, width, padding, space;
 
-=======
-    const height = screenHeight * 65 / 100, width = screenWidth * 65 / 100, padding = 60;
+    if (screenWidth >= 800) {
+      height = screenWidth * 40 / 100
+      width = screenWidth * 55 / 100
+      padding = 60;
+      space = 5
+    } else {
+      height = screenWidth * 80 / 100
+      width = screenWidth * 95 / 100
+      padding = 60;
+      space = 5;
+    }
 
->>>>>>> 375d357bfd43337b20699f2144a3d8c2e62f5a18
     const svg = d3.select("#chart")
       .append("svg")
-      .attr("height", height)
+      .attr("height", height+50)
       .attr("width", width);
-<<<<<<< HEAD
 
-    const xScale = d3.scaleLinear()
-      .domain([16, 23])
-      .range([50, width - padding]);
-
-=======
 
     const xScale = d3.scaleLinear()
       .domain([16, 24])
-      .range([padding, width - padding]);
+      .range([padding + screenWidth * space / 100, width - padding + screenWidth * space / 100]);
 
->>>>>>> 375d357bfd43337b20699f2144a3d8c2e62f5a18
+
     const yScale = d3.scaleTime()
       .domain([parseYear(2017), parseYear(2028)])
       .range([height - padding, 50]);
+      
+    const xAxis = d3.axisBottom(xScale);
+    svg.append("g")
+      .attr("transform", `translate(0,${height - padding})`)
+      .attr("id", "x-axis")
+      .call(xAxis);
+
+    const yAxis = d3.axisLeft(yScale);
+    svg.append("g")
+      .attr("transform", `translate(${padding + screenWidth * space / 100}, 0)`)
+      .attr("id", "y-axis")
+      .call(yAxis);
 
     const checkPoint = svg.selectAll("circle")
       .data(AchTimeline)
@@ -58,7 +70,7 @@ const Chart = () => {
       .attr("class", (d, i) => "point-" + i)
       .attr("cx", (d, i) => xScale(d.age))
       .attr("cy", (d, i) => yScale(parseYear(d.year)) - 30)
-      .attr("r", screenWidth * 0.8 / 100)
+      .attr("r", screenWidth * 1 / 100)
       .attr("stroke", "rgb(220, 95, 0)")
       .attr("stroke-width", 3)
       .attr("fill", "black")
@@ -92,87 +104,72 @@ const Chart = () => {
       .attr("marker-end", "url(#arrowhead)");
 
     let Scrollactive = true;
-    const container = d3.select("#chart");
-    container.selectAll(".image")
+
+    svg.selectAll("image")
       .data(AchTimeline)
       .enter()
-      .append("img")
+      .append("image")
+      .attr("href", "./Redflag.gif")
       .attr("id", "flag")
-      .attr("src", "./Redflag.gif")
-      .attr("alt", "Flag Image")
-      .style("width", screenWidth * 5 / 100 + "px")
-      .style("height", screenWidth * 5 / 100 + "px")
-      .style("position", "absolute")
-      .style("left", d => `${xScale(d.age) + screenWidth * 15.5 / 100}px`)
-      .style("top", d => `${yScale(parseYear(d.year))}px`)
-      .style("display", d => {
-        return d.name == 'Upcoming' || d.name == "Not Available" ? "none" : "block"
+      .attr("x", d => { return screenWidth >= 800 ? xScale(d.age) - screenWidth * 4 / 100 : xScale(d.age) - screenWidth * 9/ 100 })
+      .attr("y", d => { return screenWidth >= 800 ? yScale(parseYear(d.year)) - screenWidth * 5.9 / 100 : yScale(parseYear(d.year)) - screenWidth * 12 / 100 })
+      .attr("width", (d) => { return screenWidth >= 800 ?screenWidth * 5 / 100:screenWidth * 10 / 100  })
+      .attr("height",(d) => { return screenWidth >= 800 ?screenWidth * 5 / 100:screenWidth * 10 / 100  } )
+      .each(function (d) {
+        if (d.name == 'Upcoming' || d.name == 'Not Available') {
+          d3.select(this).remove();
+        }
+      })
+      .attr("transform", function (d) {
+        const xPos = xScale(d.age);
+        const yPos = yScale(parseYear(d.year)) - 30;
+        return `rotate(35, ${xPos + 25}, ${yPos + 25})`;
       });
 
-    container.selectAll(".image")
+    svg.selectAll("image.scroll")
       .data(AchTimeline)
       .enter()
-      .append("img")
+      .append("image")
       .attr("id", "Cscroll")
-      .attr("src", "./Scrolls/Scrollclose.png")
-      .attr("alt", "Flag Image")
-      .style("width", screenWidth * 5 / 100 + "px")
-      .style("height", screenWidth * 5 / 100 + "px")
-      .style("position", "absolute")
-      .style("left", d => `${xScale(d.age) + screenWidth * 15 / 100}px`)
-      .style("top", d => `${yScale(parseYear(d.year)) + screenWidth * 3 / 100}px`)
-      .style("display", d => {
-        return d.name == 'Upcoming' || d.name == "Not Available" ? "none" : "block"
+      .attr("href", "./Scrolls/Scrollclose.png")
+      .attr("alt", "Scroll Image")
+      .attr("x", d => { return screenWidth >= 800 ? xScale(d.age) - screenWidth * 4 / 100 : xScale(d.age) - screenWidth * 8/ 100 })
+      .attr("y", d => { return screenWidth >= 800 ? yScale(parseYear(d.year)) - screenWidth * 3 / 100 : yScale(parseYear(d.year)) - 50 })
+      .attr("width", (d) => { return screenWidth >= 800 ?screenWidth * 7 / 100:screenWidth * 14 / 100  })
+      .attr("height",(d) => { return screenWidth >= 800 ?screenWidth * 7 / 100:screenWidth * 14 / 100  } )
+      .each(function (d) {
+        // Remove scroll if it's 'Upcoming' or 'Not Available'
+        if (d.name == 'Upcoming' || d.name == 'Not Available') {
+          d3.select(this).remove();
+        }
       })
       .on("click", function (event, d) {
         const imgElement = d3.select(this);
+        imgElement.raise(); 
         if (Scrollactive) {
-          imgElement.attr("src", d => {
-            console.log(d.img)
-            return d.img
+          imgElement.attr("href", function (d) {
+            return d.img;
           })
-            .attr("id", "Oscroll")
-            .style("width", "500px")
-            .style("height", "500px")
-            .style("top", (d, i) => 400 + "px");
+          .transition()
+          .duration(700)
+          .ease(d3.easeCubicInOut)
+            .attr("width", (d) => { return screenWidth >= 800 ?screenWidth * 30 / 100:screenWidth * 70 / 100  })
+            .attr("height",(d) => { return screenWidth >= 800 ?screenWidth * 30 / 100:screenWidth * 70 / 100  } )
+            .attr("x", screenWidth >= 800 ?screenHeight*80/100: screenWidth*10/100)
+            .attr("y", screenWidth >= 800 ?screenHeight*25/100: screenWidth*25/100)
+            
           Scrollactive = false;
         } else {
-          imgElement.attr("src", "./Scrolls/Scrollclose.png")
+          imgElement.attr("href", "./Scrolls/Scrollclose.png")
             .attr("id", "Cscroll")
-            .style("width", screenWidth * 5 / 100 + "px")
-            .style("height", screenWidth * 5 / 100 + "px")
-            .style("top", d => `${yScale(parseYear(d.year)) + 35}px`);
+            .attr("width", (d) => { return screenWidth >= 800 ?screenWidth * 7 / 100:screenWidth * 14 / 100  })
+            .attr("height",(d) => { return screenWidth >= 800 ?screenWidth * 7 / 100:screenWidth * 14 / 100  } )
+            .attr("x", d => { return screenWidth >= 800 ? xScale(d.age) - screenWidth * 4 / 100 : xScale(d.age) - screenWidth * 8/ 100 })
+            .attr("y", d => { return screenWidth >= 800 ? yScale(parseYear(d.year)) - screenWidth * 3 / 100 : yScale(parseYear(d.year)) - 50 })
+            
           Scrollactive = true;
         }
       });
-<<<<<<< HEAD
-
-
-
-
-
-
-    const xAxis = d3.axisBottom(xScale);
-    svg.append("g")
-      .attr("transform", `translate( 10,${height - padding})`)
-      .attr("id", "y-axis")
-      .call(xAxis);
-
-=======
-
-    const xAxis = d3.axisBottom(xScale);
-    svg.append("g")
-      .attr("transform", `translate(0,${height - padding})`)
-      .attr("id", "y-axis")
-      .call(xAxis);
-
->>>>>>> 375d357bfd43337b20699f2144a3d8c2e62f5a18
-    const yAxis = d3.axisLeft(yScale);
-    svg.append("g")
-      .attr("transform", `translate(${padding}, 0)`)
-      .attr("id", "y-axis")
-      .call(yAxis);
-
   }, []);
 
 

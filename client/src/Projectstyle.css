@@ -18,8 +18,12 @@ iframe {
     font-family: "Rubik Wet Paint", serif;
     font-weight: 400;
     color: rgb(240, 145, 3);
-    text-shadow: 0.1vw 0.1vw 0.3vw rgb(149, 146, 146);
-    font-size: 4vw;
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+    font-size: 3vw;
+}
+#p-detail{
+    position: relative;
+    font-size: 1.5vw;
 }
 
 #options {
@@ -33,6 +37,7 @@ iframe {
     margin: 3vw 1vw;
     padding: 0.7vw 1.2vw;
     font-size: 1vw;
+    font-weight: 800;
     border-radius: 2vw;
     border: none;
     box-shadow: inset 0 0.5vw 1vw black;

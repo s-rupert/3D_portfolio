@@ -4,15 +4,9 @@ import './index.css';
 import { Homepage } from './Home';
 import { Project } from './Project'
 import { Achievement } from './Achievement';
+import { Skills } from './Skills';
+import { Footer } from './Footer';
 function App() {
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     window.location.reload();
-  //   }, 10000); // 60000 milliseconds = 1 minute
-
-  //   // Cleanup the interval when the component unmounts
-  //   return () => clearInterval(interval);
-  // }, []);
   useEffect(() => {
     let resizeTimer;
     const handleResize = () => {
@@ -31,6 +25,8 @@ function App() {
       <Homepage />
       <Project />
       <Achievement />
+      <Skills />
+      <Footer />
     </div>
   );
 }

@@ -209,6 +209,7 @@ const Project = () => {
     return (
         <div id="project-section">
             <p id="title-p">Project</p>
+            <p id="p-detail">I have completed these project along the coding journey.</p>
             <div id="options">
                 <button className="button active" onClick={() => clickHandler(1)}>All</button>
                 <button className="button" onClick={() => clickHandler(2)}>JavaScript</button>
