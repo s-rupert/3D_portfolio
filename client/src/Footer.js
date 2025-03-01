@@ -12,14 +12,14 @@ const Footer = () => {
   return (
     <div id="footer-section">
       <div id="contact-feeedback">
-        <div id="search-container">
-          <input type="text" id="contact" placeholder="Type your message..." />
+        <div id="contact-container">
+          <input type="text"  placeholder="Type your message..." />
           <button onclick={() => sendEmail()}>
             Contact
           </button>   
         </div>
 
-        <div class="feedback-container">
+        <div id="feedback-container">
           <h2>Feedback</h2>
           <form id="feedbackForm">
             <input type="text" id="name" placeholder="Your Name" required />
@@ -29,21 +29,10 @@ const Footer = () => {
           </form>
         </div>
       </div>
-      <div className="row">
+      <div>
         <div id="logo">
           <div id="l-top">RUPESH</div>
           <div id="l-bottom">&lt;INFO/&gt;</div>
-        </div>
-      </div>
-
-      <div className="row">
-        <div className="col-6 text-center">
-          <div>Home</div>
-          <div>About us</div>
-          <div>Services</div>
-          <div>Projects</div>
-          <div>Testimonials</div>
-          <div>Contact</div>
         </div>
       </div>
 
