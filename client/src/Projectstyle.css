@@ -324,18 +324,13 @@ iframe {
 
 /* If the screen width is less than 700 or specifically for mobile phones */
 @media (max-width: 700px) {
-    /* #project-section {
-        position: relative;
-        margin-top: 8vw;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    
-    } */
+ 
 
     #title-p {
         font-size: 7vw;
+    }
+    #p-detail{
+        font-size:3vw;
     }
 
     #options button {

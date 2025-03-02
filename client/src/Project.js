@@ -3,6 +3,7 @@ import './Projectstyle.css';
 const Product = require('./Product.json');
 
 const Project = () => {
+
     const colorArray = [
         "#000080", // Navy Blue
         "#006400", // Dark Green
@@ -61,7 +62,7 @@ const Project = () => {
                 }
                 for (let i = 0; i < Product.length - 5; i++) {
                     positionArray.push(i + 5);
-                    locationArray.push(overFive[0] + (overFive[1] * (i+1)) + (padding * (i)));
+                    locationArray.push(overFive[0] + (overFive[1] * (i + 1)) + (padding * (i)));
                 }
             }
         } else {
@@ -90,7 +91,7 @@ const Project = () => {
                 }
                 for (let i = 0; i < Matched.length - 5; i++) {
                     positionArray.push(i + 5);
-                    locationArray.push(overFive[0] + (overFive[1] * (i+1)) + (padding * (i)));
+                    locationArray.push(overFive[0] + (overFive[1] * (i + 1)) + (padding * (i)));
                 }
             }
         }
@@ -206,6 +207,9 @@ const Project = () => {
             </div>
         );
     }
+
+
+
     return (
         <div id="project-section">
             <p id="title-p">Project</p>

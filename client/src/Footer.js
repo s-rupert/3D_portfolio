@@ -16,32 +16,26 @@ const Footer = () => {
           <input type="text"  placeholder="Type your message..." />
           <button onclick={() => sendEmail()}>
             Contact
-          </button>   
+          </button> 
+          <p>Feel free to reach out through the provided channels. I'm available for full-time and part-time opportunities and open to contributing to large-scale projects to gain valuable experience. Thank you for visiting my website!</p>  
         </div>
 
         <div id="feedback-container">
+        <form id="feedbackForm">
           <h2>Feedback</h2>
-          <form id="feedbackForm">
-            <input type="text" id="name" placeholder="Your Name" required />
-            <input type="email" id="email" placeholder="Your Email" required />
-            <textarea id="message" placeholder="Your Feedback" required></textarea>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea id="message" rows="10" cols="50" placeholder="Your Feedback" required></textarea>
             <button type="submit">Submit Feedback</button>
+            
           </form>
         </div>
       </div>
-      <div>
-        <div id="logo">
-          <div id="l-top">RUPESH</div>
-          <div id="l-bottom">&lt;INFO/&gt;</div>
-        </div>
-      </div>
-
-      <div className="row">
-        <div className="col-6">
-          <a href="https://www.facebook.com/profile.php?id=100049601832381" target="_blank" rel="noopener noreferrer">
-            <i className="fa-brands fa-facebook"></i>
+        <div id="contact-channels">
+          <a href="https://github.com/s-rupert" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github"></i>
           </a>
-          <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/Srupesh01" target="_blank" rel="noopener noreferrer">
             <i className="fa-brands fa-twitter"></i>
           </a>
           <a href="https://www.instagram.com/s_rupert01/" target="_blank" rel="noopener noreferrer">
@@ -50,11 +44,10 @@ const Footer = () => {
           <a href="https://www.linkedin.com/in/srupert/" target="_blank" rel="noopener noreferrer">
             <i className="fa-brands fa-linkedin"></i>
           </a>
-        </div>
       </div>
 
-      <div className="copyright">
-        ©2024 <span>Rupesh</span> All Rights Reserved, Inc.
+      <div id="copyright">
+        ©2024 <span>Rupesh</span>. All Rights Reserved, Inc.
       </div>
     </div>
   );

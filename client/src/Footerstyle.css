@@ -1,39 +1,126 @@
 #footer-section{
-
+    position: relative;
+    margin-top: 8vw;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
 }
 #contact-feeedback{
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap:50px;
+  gap:5vw;
 }
 #contact-container{
-  font-size:30px;
   margin:5px 10px;
   display:flex;
-  flex-direction:row;
+  flex-direction:column;
   justify-content: center;
   align-items: center;
-  gap:10px;
+  gap:15px;
 }
 #contact-container input{
   color:black;
   background-color: white;
+  padding:10px 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  width:40vw;
 }
 #contact-container button{
-  padding:5px 10px;
-  background-color: rgb(255, 174, 0);
+  padding:10px 15px;
+  background-color: rgb(255, 119, 0);
   border-radius: 10px;
+  font-size: 20px;
+  width: 20vw;
 }
-#feedback-container{
-  
-  
+#contact-container button:hover{
+   background-color: rgb(225, 198, 138);
+  font-weight: 800;
 }
-#feedbackfortm{
+
+
+#contact-container p{
+  padding:10px 15px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 20px;
+  width: 50vw;
+}
+
+#feedbackForm{
   font-size:25px;
+  width:35vw;
   display:flex;
   flex-direction:column;
   justify-content: center;
   align-items: left;
+  font-size:25px;
+  gap:10px;
+}
+#feedbackForm input, #feedbackForm textarea, #feedbackForm button{
+  font-size:15px;
+  padding:10px 15px;
+  border-radius: 10px;
+}
+#feedbackForm button{
+  background-color: rgb(255, 119, 0);
+}
+#feedbackForm button:hover{
+  background-color: rgb(225, 198, 138);
+  font-weight: 800;
+}
+#contact-channels{
+  margin-top:50px;
+  width:100vw;
+  background-color: rgb(255, 119, 0);
+  Padding:10px 30px;
+}
+#contact-channels i{
+  font-size:30px;
+  padding:5px 7vh;
+  color: rgb(0, 0, 0);
+}
+#contact-channels i:hover{
+  font-size:30px;
+  color: rgb(255, 255, 255);
+}
+#copyright{
+  font-size:20px;
+  padding:10px;
+}
+
+
+@media (max-width:800px){
+  
+#contact-feeedback{
+  flex-direction: column;
+}
+#contact-container input{
+  width:80vw;
+}
+#contact-container button{
+  width: 40vw;
+}
+
+
+#contact-container p{
+  width: 90vw;
+}
+
+#feedbackForm{
+  width:80vw;
+}
+#feedbackForm button{
+  width: 40vw;
+}
+#contact-channels{
+  Padding:5px 15px;
+}
+#contact-channels i{
+  font-size:25px;
+}
 }
