@@ -5,7 +5,7 @@
         "language":["HTML","CSS","JavaScript"],
         "url":"https://www.youtube.com/embed/7d8Vube4rd0?si=Yi-QET52xa4YcVSH",
         "description":"A responsive portfolio website featuring my projects, skills, and experience. Built with a clean UI, smooth animations, and interactive elements. ",
-        "detail":"empty"
+        "github_link":"empty"
     },
     {
         "name":"Personal Portfolio 2023",
@@ -13,7 +13,7 @@
         "language":["HTML","CSS","JavaScript"],
         "url":"https://www.youtube.com/embed/JjpklAbPncU?si=3ngkKH1Q21rwWXiz",
         "description":"A responsive portfolio website featuring my projects, skills, and experience. Built with a clean UI, smooth animations, and interactive elements. ",
-        "detail":"empty"
+        "github_link":"https://github.com/s-rupert/Personal-Portfolio"
     },
     {
         "name":"Miniool",
@@ -21,7 +21,7 @@
         "language":["HTML","CSS","JavaScript"],
         "url":"https://www.youtube.com/embed/GTRDnNwWTmA?si=hiBmayoO_k2puSrF",
         "description":"An e-commerce platform for hand-knitted mini toys, built as a college project with a fully responsive design.",
-        "detail":"empty"
+        "github_link":"https://github.com/s-rupert/Miniool"
     },
     {
         "name":"Jovian Job",
@@ -29,7 +29,7 @@
         "language":["HTML","CSS","JavaScript", "Bootstrap"],
         "url":"https://www.youtube.com/embed/7KVZ-F7bod8?si=Ymrea3AoyIMXJJ9i",
         "description":"A job listing website with a responsive design, allowing users to explore job opportunities and applications effortlessly.",
-        "detail":"empty"
+        "github_link":"https://github.com/s-rupert/career-site-live"
     },
     {
         "name":"Jovian Application",
@@ -37,21 +37,13 @@
         "language":["HTML","CSS","JavaScript", "Bootstrap", "vercel", "Nodemon"],
         "url":"https://www.youtube.com/embed/trOVyd_STDo?si=8nJ98fr3A_4E_Qk9",
         "description":"A responsive job portal showcasing real-time job listings with an intuitive UI for a smooth browsing experience.",
-        "detail":"empty"
-    },
-    {
-        "name":"Jovian Application",
-        "type":"Javascript",
-        "language":["HTML","CSS","JavaScript", "Bootstrap", "vercel", "Nodemon"],
-        "url":"https://www.youtube.com/embed/trOVyd_STDo?si=8nJ98fr3A_4E_Qk9",
-        "description":"A responsive job portal showcasing real-time job listings with an intuitive UI for a smooth browsing experience.",
-        "detail":"empty"
+        "github_link":"https://github.com/s-rupert/Express_live"
     },
         {
           "name": "Data Visualization Projects",
           "language": ["D3"," SVG"," HTML"," CSS"," JSON"," API"," AJAX"],
           "description": "Developed 5 visualizations including bar charts, scatter plots, heat maps, choropleth maps, and tree diagrams.",
-          "detail": "empty",
+          "github_link": "empty",
           "url": "https://www.youtube.com/embed/W92LyV2pvYE?si=ExXf1baEPsDQrBTc",
           "type": "FCC"
         },
@@ -59,15 +51,15 @@
           "name": "JavaScript Algorithms & Data Structures",
           "language": ["JS", "HTML"," CSS"],
           "description": "Completed 5 projects including Palindrome Checker, Roman Numeral Converter, Number Validator, Cash Register, and Pokémon Search App.",
-          "detail": "empty",
+          "github_link": "empty",
           "url": "https://www.youtube.com/embed/g67DqvQrDWM?si=_ZkXzciLTSzwAdhJ",
           "type": "FCC"
         },
         {
           "name": "Front-End Libraries",
-          "language": ["HTML"," CSS", "JS"," SASS"," Bootstrap"," jQuery", "React"," Redux"],
+          "language": ["HTML"," CSS", "JS"," SASS"," Bootstrap"," jQuery", "React"],
           "description": "Built 5 projects like Random Quote Machine, Markdown Previewer, Drum Machine, JavaScript Calculator, and 25+5 Clock.",
-          "detail": "empty",
+          "github_link": "empty",
           "url": "https://www.youtube.com/embed/vk3kcWdBar0?si=6wltTLU0t-y42hAq",
           "type": "FCC"
         },
@@ -75,7 +67,7 @@
           "name": "Responsive Web Design Projects",
           "language": ["HTML", "CSS"],
           "description": "Created survey form, tribute page, technical documentation page, and personal portfolio webpage.",
-          "detail": "empty",
+          "github_link": "empty",
           "url": "https://www.youtube.com/embed/ViV1twzo18w?si=oZzeP3n-miDGEjwY",
           "type": "FCC"
         },
@@ -83,7 +75,7 @@
           "name": "URL Shortener",
           "language": ["JavaScript"," Node.js"," MongoDB"],
           "description": "A URL shortener service that stores links in MongoDB and redirects users using a unique ID.",
-          "detail": "empty",
+          "github_link": "https://github.com/s-rupert/URL_SHORTNER",
           "url": "https://www.youtube.com/embed/o4bVqDQ04hk?si=0KS6dLL76cwe5VQ7",
           "type": "FCC"
         },
@@ -91,7 +83,7 @@
           "name": "Timestamp Microservice",
           "language": ["Node.js", "JavaScript"],
           "description": "A date conversion tool that supports both Unix timestamps and formatted dates using GET and POST methods.",
-          "detail": "empty",
+          "github_link": "https://github.com/s-rupert/Timestamp-Microservice",
           "url": "https://www.youtube.com/embed/YDYGGM3mcrg?si=O1PBR4z0Dp3hH3at",
           "type": "FCC"
         },
@@ -99,7 +91,7 @@
           "name": "3D Modeling",
           "language": ["Vite, Angular", "Node.js", "Three.js", "HTML", "CSS"],
           "description": "An interactive 3D living room model with rotation and scaling controls for immersive experience.",
-          "detail": "empty",
+          "github_link": "empty",
           "url": "https://www.youtube.com/embed/qgNbHTzjWC0?si=GHuF_YmmUDXlPJZI",
           "type": "Others"
         },
@@ -107,7 +99,7 @@
           "name": "File Metadata",
           "language": ["Node.js", "JavaScript", "HTML", "CSS"],
           "description": "An online tool to analyze file properties like name, type, and size for formats like PNG, PDF, Word, etc.",
-          "detail": "empty",
+          "github_link": "https://github.com/s-rupert/File_metadata_microservice",
           "url": "https://www.youtube.com/embed/DMSb243dAWY?si=HD0xob29og_6zxZM",
           "type": "FCC"
         },
@@ -115,7 +107,7 @@
           "name": "Exercise Tracker",
           "language": ["MongoDB", "JavaScript", "Node.js"],
           "description": "A fitness tracker that logs exercise details with timestamps, stores data in MongoDB, and generates unique IDs.",
-          "detail": "empty",
+          "github_link": "https://github.com/s-rupert/exercise-tracker",
           "url": "https://www.youtube.com/embed/Ja_TPX3nVoE?si=hX9DrWBQhLe-4AIw",
           "type": "FCC"
         },
@@ -123,7 +115,7 @@
           "name": "Scientific Calculator",
           "language": ["HTML","CSS", "JavaScript"],
           "description": "A responsive scientific calculator with advanced features, designed for ease of use and accuracy.",
-          "detail": "empty",
+          "github_link": "https://github.com/s-rupert/Scientific-calive",
           "url": "https://www.youtube.com/embed/Re3uG5eMxhk?si=_y5xzG-XabitiBmL",
           "type": "FCC"
         },
@@ -131,7 +123,7 @@
           "name": "SmartDairy",
           "language": ["Java", "Jframe", "Apache POI"],
           "description": "An offline data storage application built with JavaFX, Apache POI, and Maven for managing dairy operations.",
-          "detail": "empty",
+          "github_link": "empty",
           "url": "https://www.youtube.com/embed/cRkgENoq6K4?si=5G-glmUtH7v3cLEN",
           "type": "Others"
         }      

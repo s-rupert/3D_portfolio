@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './Projectstyle.css';
 const Product = require('./Product.json');
 
@@ -195,7 +195,7 @@ const Project = () => {
                 <h1 id="p-title">{Project[i].name}</h1>
                 <div id="p-stack">
                     <div id="line-left"></div>
-                    <p>Tech Stack</p>
+                    <p>Tools <i class="fa-solid fa-screwdriver-wrench"></i></p>
                     <div id="line-right"></div>
                 </div>
 
@@ -207,22 +207,32 @@ const Project = () => {
                 <div id="p-detail">
                     {Project[i].description}
                 </div>
-                <button id="b-detail">Detail →</button>
+                
+                {Project[i].github_link !== "empty" ? (
+                <a id="b-detail" href={Project[i].github_link} target="_blank" rel="noopener noreferrer">
+                    Github Link
+                </a>
+            ) : null}
             </div>
         );
     }
-
-
+    const lastScrollLeft = useRef(0);
+    //Handling the card scrolls
     useEffect(() => {
         const colorCard = document.getElementById('project-card');
         if (!colorCard) return;
 
         const handleScrollWithLatestState = (event) => {
-            if (event.shiftKey) {
+            if (!event.shiftKey) return;
                 event.preventDefault();
-
-                console.log(locations, positions);
-            }
+            setTimeout(() => {
+                if (event.shiftKey && event.wheelDelta === -60) {
+                    cardClickHandler(4)
+                }else{
+                    cardClickHandler(2)
+                }
+            }, 400);        
+            
         };
 
         colorCard.addEventListener('wheel', handleScrollWithLatestState, { passive: false });
