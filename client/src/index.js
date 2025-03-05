@@ -6,6 +6,7 @@ import { Project } from './Project'
 import { Achievement } from './Achievement';
 import { Skills } from './Skills';
 import { Footer } from './Footer';
+import { Test } from './Test';
 function App() {
   useEffect(() => {
     let resizeTimer;
@@ -27,6 +28,7 @@ function App() {
       <Achievement />
       <Skills />
       <Footer />
+      {/* <Test /> */}
     </div>
   );
 }

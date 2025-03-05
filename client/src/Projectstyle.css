@@ -64,7 +64,7 @@ iframe {
     margin: vw 0;
     margin-left: -3vw;
     white-space: nowrap;
-    overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: hidden;
     align-items: center;
     height: 30vw;

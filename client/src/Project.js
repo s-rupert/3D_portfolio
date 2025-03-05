@@ -28,8 +28,8 @@ const Project = () => {
         overFive = [(screenWidth / 2) + ((screenWidth * 36) / 100), ((screenWidth * 12) / 100)]
     }
 
-    const [locations, setlocations] = useState([]);
-    const [positions, setPositions] = useState([])
+    const [locations, setlocations] = useState([fLocation]);
+    const [positions, setPositions] = useState([1, 2, 3, 4, 5])
     const [Project, setProject] = useState(Product)
 
 
@@ -103,11 +103,14 @@ const Project = () => {
     }, [])
     const cardClickHandler = (btnNum) => {
         const cards = document.querySelectorAll(".card");
+
         if (btnNum === 2) {
+
             cards.forEach((card) => card.className = "")
             let templocations = [locations.slice(), positions.slice()]; // Deep copy
 
             let firstValue = [templocations[0][0], templocations[1][0]]; // Store first values
+
 
             for (let i = 0; i < templocations[0].length - 1; i++) {
                 templocations[0][i] = templocations[0][i + 1];
@@ -132,6 +135,7 @@ const Project = () => {
 
             setlocations([...templocations[0]]);
             setPositions([...templocations[1]]);
+
 
         } else if (btnNum === 4) {
             cards.forEach((card) => card.className = "")
@@ -207,6 +211,27 @@ const Project = () => {
             </div>
         );
     }
+
+
+    useEffect(() => {
+        const colorCard = document.getElementById('project-card');
+        if (!colorCard) return;
+
+        const handleScrollWithLatestState = (event) => {
+            if (event.shiftKey) {
+                event.preventDefault();
+
+                console.log(locations, positions);
+            }
+        };
+
+        colorCard.addEventListener('wheel', handleScrollWithLatestState, { passive: false });
+
+        return () => {
+            colorCard.removeEventListener('wheel', handleScrollWithLatestState);
+        };
+    }, [locations, positions]);
+
 
 
 
