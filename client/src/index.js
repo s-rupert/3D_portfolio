@@ -23,11 +23,11 @@ function App() {
   }, []);
   return (
     <div id="main-section">
-      <Homepage />
-      {/* <Project />
-      <Achievement />
-      <Skills />
-      <Footer /> */}
+      {/* <Homepage /> */}
+      <Project />
+      {/* <Achievement /> */}
+      {/* <Skills /> */}
+      {/* <Footer /> */}
       {/* <Test /> */}
     </div>
   );

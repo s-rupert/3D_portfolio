@@ -24,8 +24,8 @@ const Project = () => {
         fLocation = [((screenWidth / 2) - ((screenWidth * 95) / 100)) - (padding * 2), ((screenWidth / 2) - ((screenWidth * 65) / 100)) - padding, ((screenWidth / 2) - ((screenWidth * 25) / 100)), ((screenWidth / 2) + ((screenWidth * 25) / 100)) + padding, ((screenWidth / 2) + ((screenWidth * 65) / 100)) + (padding * 2)]
         overFive = [(screenWidth / 2) + ((screenWidth * 77) / 100), ((screenWidth * 30) / 100)]
     } else {
-        fLocation = [((screenWidth / 2) - ((screenWidth * 36) / 100)) - (padding * 2), ((screenWidth / 2) - ((screenWidth * 24) / 100)) - padding, ((screenWidth / 2) - ((screenWidth * 10) / 100)), ((screenWidth / 2) + ((screenWidth * 10) / 100)) + padding, ((screenWidth / 2) + ((screenWidth * 24) / 100)) + (padding * 2)]
-        overFive = [(screenWidth / 2) + ((screenWidth * 36) / 100), ((screenWidth * 12) / 100)]
+        fLocation = [(screenWidth / 2) - 685 - (padding * 2), (screenWidth / 2) - 455 - padding, (screenWidth / 2) - 185, (screenWidth / 2) + 185 + padding, (screenWidth / 2) + 455 + (padding * 2)]
+        overFive = [(screenWidth / 2) + 635, 230]
     }
 
     const [locations, setlocations] = useState([fLocation]);
@@ -204,10 +204,9 @@ const Project = () => {
                         <p>{Project[i].language[j]}</p>
                     ))}
                 </div>
-                <div id="p-detail">
+                <div id="pc-detail">
                     {Project[i].description}
                 </div>
-                
                 {Project[i].github_link !== "empty" ? (
                 <a id="b-detail" href={Project[i].github_link} target="_blank" rel="noopener noreferrer">
                     Github Link
@@ -218,33 +217,74 @@ const Project = () => {
     }
     //Handling the card scrolls
     useEffect(() => {
-        const colorCard = document.getElementById('project-card');
-        if (!colorCard) return;
+        // const colorCard = document.getElementById('project-card');
+        // if (!colorCard) return;
 
-        const handleScrollWithLatestState = (event) => {
-            if (!event.shiftKey) return;
-            console.log("hi"+event.shiftKey+event.wheelDelta)
-                event.preventDefault();
-            setTimeout(() => {
-                if (event.shiftKey && event.wheelDelta >= -60) {
-                    console.log(event.wheelDelta)
-                    cardClickHandler(4)
-                }else if(event.shiftKey && event.wheelDelta <= 60){
-                    console.log("else"+event.wheelDelta)
-                    cardClickHandler(2)
-                }
-            }, 400);        
+        // const handleScrollWithLatestState = (event) => {
+        //     if (!event.shiftKey) return;
+        //     console.log("hi"+event.shiftKey+event.wheelDelta)
+        //         event.preventDefault();
+        //     setTimeout(() => {
+        //         if (event.shiftKey && event.wheelDelta >= -60) {
+        //             console.log(event.wheelDelta)
+        //             cardClickHandler(4)
+        //         }else if(event.shiftKey && event.wheelDelta <= 60){
+        //             console.log("else"+event.wheelDelta)
+        //             cardClickHandler(2)
+        //         }
+        //     }, 400);        
             
-        };
+        // };
 
-        colorCard.addEventListener('wheel', handleScrollWithLatestState, { passive: false });
+        // colorCard.addEventListener('wheel', handleScrollWithLatestState, { passive: false });
 
-        return () => {
-            colorCard.removeEventListener('wheel', handleScrollWithLatestState);
-        };
+        // return () => {
+        //     colorCard.removeEventListener('wheel', handleScrollWithLatestState);
+        // };
     }, [locations, positions]);
 
-
+    const ReferenceCall = (cindex,dindex) =>{
+        if(cindex > dindex){
+            console.log(cindex-dindex)
+        }else{
+            console.log(cindex-dindex)
+        }
+    }
+    useEffect(() => {
+        const colorCard = document.getElementById('project-card');
+      
+        const handleScroll = () => {
+          const scrollLeft = colorCard.scrollLeft;
+          const cards = colorCard.children;
+          let currentIndex;
+          Array.from(cards).find((card, index) => {
+            if (card.classList.contains("card-3")) {
+                currentIndex=index;
+              return true;
+            }
+            return false;
+          });
+        
+          let j = 1; 
+          for (let card of cards) {
+            const cardRect = card.getBoundingClientRect();
+      
+            if (cardRect.x >= 150 && cardRect.x <=400 ) {
+                
+                ReferenceCall(currentIndex,j)
+            }
+            j++;
+          }
+        };
+      
+        colorCard.addEventListener("scroll", handleScroll);
+      
+        return () => {
+          colorCard.removeEventListener("scroll", handleScroll);
+        };
+      }, []);
+      
+      
 
 
     return (
@@ -261,6 +301,7 @@ const Project = () => {
             <div id="project-card">
                 {divs}
             </div>
+            <div id ="card-scroll"></div>
         </div>
     )
 }

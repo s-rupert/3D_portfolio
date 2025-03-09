@@ -6,7 +6,7 @@ iframe {
 
 #project-section {
     position: relative;
-    margin-top: 8vw;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -19,11 +19,11 @@ iframe {
     font-weight: 400;
     color: rgb(240, 145, 3);
     text-shadow: 2px 2px 5px rgb(255, 255, 255);
-    font-size: 3vw;
+    font-size: 55px;
 }
 #p-detail{
     position: relative;
-    font-size: 1.5vw;
+    font-size: 25px;
 }
 
 #options {
@@ -36,7 +36,7 @@ iframe {
     position: relative;
     margin: 3vw 1vw;
     padding: 0.7vw 1.2vw;
-    font-size: 1vw;
+    font-size: 20px;
     font-weight: 800;
     border-radius: 2vw;
     border: none;
@@ -64,25 +64,27 @@ iframe {
     margin: vw 0;
     margin-left: -3vw;
     white-space: nowrap;
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: hidden;
     align-items: center;
-    height: 30vw;
+    height: 500px;
 }
 
 #project-card::after {
     content: "";
     position: fixed;
-    width: 10vw;
+    width: 15vw;
     left: 0;
     height: 100%;
+    z-index: 100;
     background: linear-gradient(to left, rgba(255, 255, 255, 0)10%, #e9eea5);
 }
 
 #project-card::before {
     content: "";
     position: fixed;
-    width: 10vw;
+    width: 15vw;
+    z-index: 100;
     right: 0;
     height: 100%;
     background: linear-gradient(to right, rgba(255, 255, 255, 0)10%, #f1b1e4);
@@ -92,25 +94,14 @@ iframe {
     position: absolute;
     opacity: 0.2;
     flex-shrink: 0;
-    width: 12vw;
-    height: 18.3vw;
+    width: 230px;
+    height: 330px;
     background-color: rgb(135, 177, 180);
     border: 1px solid #ccc;
     border-radius: 1vw;
     box-shadow: 0vw 0.3vw 0.4vw rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: left 1.5s ease-in-out, right 1.5s ease-in-out, height 1.5s ease-in-out, width 1.5s ease-in-out;
-}
-#project-card .card:hover::after {
-    content: "";
-    width: 100%;
-    height: 20%;
-    background-color: rgba(0, 0, 0, 0.329);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    border: 2px solid red; /* TEMPORARY: Helps debug */
 }
 
 
@@ -120,8 +111,8 @@ iframe {
 }
 #project-card .card-3 {
 
-    width: 20vw;
-    height: 24.5vw;
+    width: 370px;
+    height: 470px;
     z-index: 22;
     opacity:1;
 }
@@ -129,63 +120,63 @@ iframe {
 #project-card .card-2,
 #project-card .card-4 {
     opacity: 0.5;
-    width: 14vw;
-    height: 21vw;
+    width: 270px;
+    height: 370px;
 }
 
 
 
 /* project info card-1,card-5 */
 .card iframe {
-    width: 12vw;
-    height: 7vw;
+    width: 230px;
+    height: 129px;
 }
 
 .card #p-title {
-    margin: 0.5vw;
-    font-size: 1vw;
+    margin: 5px;
+    font-size: 20px;
 }
 
 .card #p-stack {
     display: flex;
     align-items: center;
-    gap: 0.5vw;
+    gap: 10px;
     justify-content: center;
 }
 
 .card #p-stack p {
     font-weight: bold;
-    font-size: 0.7vw;
+    font-size: 15px;
 }
 
 .card #line-left,
 .card #line-right {
-    width: 3vw;
-    height: 0.3vw;
+    width: 70px;
+    height: 5px;
     background-color: black;
 }
 
 .card #p-res {
-    margin-top: 0.5vw;
-    font-size: 0.5vw;
+    margin-top: 5px;
+    font-size: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.3vw;
+    gap: 5px;
     flex-wrap: wrap;
 }
 
 .card #p-res p {
-    padding: 0.3vw 0.4vw;
+    padding: 3px 5px;
     color: rgb(255, 255, 255);
     border-radius: 1vw;
 }
 
-.card #p-detail {
+.card #pc-detail {
     white-space: normal;
-    font-size: 0.7vw;
-    margin: 1vw;
-    line-height: 0.9vw;
+    font-size: 13px;
+    margin: 10px;
+    line-height: 17px;
     text-align: justify;
 }
 
@@ -195,56 +186,56 @@ iframe {
 
 /* project info card-3 */
 .card-3 iframe {
-    width: 20vw;
-    height: 11vw;
+    width: 370px;
+    height: 208px;
 }
 
 .card-3 #p-title {
-    margin: 0.5vw;
-    font-size: 1.5vw;
+    margin: 5px;
+    font-size: 30px;
 }
 
 .card-3 #p-stack {
     display: flex;
     align-items: center;
-    gap: 0.5vw;
+    gap: 10px;
     justify-content: center;
 }
 
 .card-3 #p-stack p {
     font-weight: bold;
-    font-size: 1vw;
+    font-size: 25px;
 }
 
 .card-3 #line-left,
 .card-3 #line-right {
-    width: 6vw;
-    height: 0.3vw;
+    width: 120px;
+    height: 8px;
     background-color: black;
 }
 
 .card-3 #p-res {
-    margin-top: 0.5vw;
+    margin: 5px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5vw;
-    font-size: 0.8vw;
+    gap: 10px;
+    font-size: 15px;
     flex-wrap: wrap;
 }
 
 .card-3 #p-res p {
-    padding: 0.3vw 1vw;
+    padding: 5px 7px;
     color: rgb(255, 255, 255);
-    border-radius: 1vw;
+    border-radius: 10px;
 }
 
-.card-3 #p-detail {
+.card-3 #pc-detail {
     white-space: normal;
-    margin: 0.7vw;
-    font-size: 16px;
+    margin: 15px;
+    font-size: 18px;
     text-align: justify;
-    line-height: 20px;
+    line-height: 22px;
 }
 
 .card-3 #b-detail {
@@ -252,80 +243,82 @@ iframe {
     font-size: 1vw;
     position: absolute;
     bottom: 0.5vw;
-    left: 7vw;
+    left: 130px;
     padding: 0.3vw 0.5vw;
     background-color: rgb(38, 164, 173);
     border: none;
     border-radius: 10.3vw;
     color:Black;
     text-decoration: none;
-
 }
-
-
-
+.card-3 #b-detail:hover {
+    background-color: rgba(38, 164, 173, 0.5);
+}
+.card-3:hover #b-detail{
+    display:block;
+}
 
 /* project info card-2,card-4 */
 .card-2 iframe,
 .card-4 iframe {
-    width: 14vw;
-    height: 8vw;
+    width: 270px;
+    height: 152px;
 }
 
 .card-2 #p-title,
 .card-4 #p-title {
-    margin: 0.5vw;
-    font-size: 1.1vw;
+    margin: 7px;
+    font-size: 20px;
 }
 
 .card-2 #p-stack,
 .card-4 #p-stack {
     display: flex;
     align-items: center;
-    gap: 0.5vw;
+    gap: 10px;
     justify-content: center;
 }
 
 .card-2 #p-stack p,
 .card-4 #p-stack p {
     font-weight: bold;
-    font-size: 0.8vw;
+    font-size: 20px;
 }
 
 .card-2 #line-left,
 .card-2 #line-right,
 .card-4 #line-left,
 .card-4 #line-right {
-    width: 4vw;
-    height: 0.3vw;
+    width: 75px;
+    height: 6px;
     background-color: black;
 }
 
 .card-2 #p-res,
 .card-4 #p-res {
-    margin-top: 0.5vw;
-    font-size: 0.6vw;
+    margin: 7px 5px;
+    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.3vw;
+    gap: 5px;
     flex-wrap: wrap;
 }
 
 .card-2 #p-res p,
 .card-4 #p-res p {
-    padding: 0.3vw 0.4vw;
+    padding: 5px 10px;
     color: rgb(255, 255, 255);
     border-radius: 1vw;
 }
 
-.card-2 #p-detail,
-.card-4 #p-detail {
+.card-2 #pc-detail,
+.card-4 #pc-detail {
     white-space: normal;
-    font-size: 0.7vw;
-    margin: 0.7vw;
+    font-size: 14px;
+    margin: 7px;
     text-align: justify;
-    line-height: 1vw;
+    line-height: 16px;
 }
 
 .card-2 #b-detail,
@@ -344,19 +337,24 @@ iframe {
         font-size: 7vw;
     }
     #p-detail{
+        margin-top: 10px;
         font-size:3vw;
     }
 
     #options button {
-        margin: 3vw 1vw;
-        padding: 0.7vw 1.2vw;
-        font-size: 3vw;
+        margin: 5vw 1vw;
+        padding: 1vw 1.5vw;
+        font-size: 2.5vw;
     }
 
 
 
     #project-card {
-        height: 70vw;
+        margin-top: 20px;
+        height: 65vw;
+    }
+    #project-card::after, #project-card::before{
+        height: 65vw;
     }
 
     #project-card .card {
@@ -366,7 +364,7 @@ iframe {
 
     #project-card .card-3 {
         width: 50vw;
-        height: 65vw;
+        height: 70vw;
     }
 
     #project-card .card-2,
@@ -409,7 +407,7 @@ iframe {
         padding: 0.5vw 0.8vw;
     }
 
-    .card #p-detail {
+    .card #pc-detail {
         font-size: 2vw;
         margin: 1vw;
         line-height: 1.9vw;
@@ -450,15 +448,17 @@ iframe {
         padding: 0.5vw 1.5vw;
     }
 
-    .card-3 #p-detail {
+    .card-3 #pc-detail {
         font-size: 2.5vw;
-        line-height: 2.5vw;
+        line-height: 3vw;
         margin:1.5vw;
     }
 
     .card-3 #b-detail {
+        position:absolute;
+        display: block;
         font-size: 3vw;
-        bottom: 1vw;
+        bottom: 4vw;
         left: 17vw;
         padding: 0.7vw 1.5vw;
 
@@ -507,8 +507,8 @@ iframe {
         padding: 0.5vw 0.8vw;
     }
 
-    .card-2 #p-detail,
-    .card-4 #p-detail {
+    .card-2 #pc-detail,
+    .card-4 #pc-detail {
         font-size: 2vw;
         margin: 1vw;
         line-height: 2.5vw;
