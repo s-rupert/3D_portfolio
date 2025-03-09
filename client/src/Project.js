@@ -216,7 +216,6 @@ const Project = () => {
             </div>
         );
     }
-    const lastScrollLeft = useRef(0);
     //Handling the card scrolls
     useEffect(() => {
         const colorCard = document.getElementById('project-card');
@@ -224,11 +223,14 @@ const Project = () => {
 
         const handleScrollWithLatestState = (event) => {
             if (!event.shiftKey) return;
+            console.log("hi"+event.shiftKey+event.wheelDelta)
                 event.preventDefault();
             setTimeout(() => {
-                if (event.shiftKey && event.wheelDelta === -60) {
+                if (event.shiftKey && event.wheelDelta >= -60) {
+                    console.log(event.wheelDelta)
                     cardClickHandler(4)
-                }else{
+                }else if(event.shiftKey && event.wheelDelta <= 60){
+                    console.log("else"+event.wheelDelta)
                     cardClickHandler(2)
                 }
             }, 400);        

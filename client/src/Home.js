@@ -42,6 +42,7 @@ const Homepage = ()=>{
                 <div id="l-top">RUPESH</div>
                 <div id="l-bottom">&lt;INFO/&gt;</div>
              </div>
+             <div id="main">
              <div id="main_info">
                 <div id="i_1">Hi, Welcome</div>
                 <div id="i_2">I,m Rupesh Singh</div>
@@ -53,6 +54,10 @@ const Homepage = ()=>{
                 <div id="i_5">
                     <button id="contact">CONTACT</button>
                 </div>
+             </div>
+             <div id="main-model">
+                <img id="model" src="/model1.gif" alt="model" />
+             </div>
              </div>
              <div id="infinite-roll">
                 <div id="logos_slide">

@@ -9,10 +9,11 @@
   overflow-x: hidden;
 }
 *::-webkit-scrollbar {
-    display: none; /* Hides the scrollbar */
-  }
+  display: none; /* Hides the scrollbar */
+}
 body {
-    background: linear-gradient(to right, #e9eea5 15%, #f1b1e4); /* Gradient from left to right */
-    min-height: 100vh; /* Ensure it covers the full viewport height */
-    margin: 0;
+  background: linear-gradient(to right, #e9eea5 15%, #f1b1e4); /* Gradient from left to right */
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+  margin: 0;
+  overflow-x: hidden;
 }

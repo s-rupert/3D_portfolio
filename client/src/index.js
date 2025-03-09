@@ -24,10 +24,10 @@ function App() {
   return (
     <div id="main-section">
       <Homepage />
-      <Project />
+      {/* <Project />
       <Achievement />
       <Skills />
-      <Footer />
+      <Footer /> */}
       {/* <Test /> */}
     </div>
   );
