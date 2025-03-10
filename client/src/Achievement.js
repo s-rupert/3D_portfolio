@@ -155,7 +155,7 @@ const Chart = () => {
           .ease(d3.easeCubicInOut)
             .attr("width", (d) => { return screenWidth >= 800 ?screenWidth * 30 / 100:screenWidth * 70 / 100  })
             .attr("height",(d) => { return screenWidth >= 800 ?screenWidth * 30 / 100:screenWidth * 70 / 100  } )
-            .attr("x", screenWidth >= 800 ?screenHeight*80/100: screenWidth*10/100)
+            .attr("x", screenWidth >= 800 ?screenWidth*20/100: screenWidth*10/100)
             .attr("y", screenWidth >= 800 ?screenHeight*25/100: screenWidth*25/100)
             
           Scrollactive = false;

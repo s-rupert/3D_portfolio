@@ -17,7 +17,7 @@ const Footer = () => {
           <button onclick={() => sendEmail()}>
             Contact
           </button> 
-          <p>Feel free to reach out through the provided channels. I'm available for full-time and part-time opportunities and open to contributing to large-scale projects to gain valuable experience. Thank you for visiting my website!</p>  
+          <p>Feel free to reach out through the provided channels. I'm available for full-time and part-time opportunities and open to contribute in projects to gain valuable experience. Thank you for visiting my website!</p>  
         </div>
 
         <div id="feedback-container">

@@ -30,12 +30,47 @@
 }
 .scard{
     position: relative;
+    overflow: hidden;
     width:400px;
     height:350px;
-    background-color: rgba(245, 233, 220, 0.674);
+    background-color: rgba(255, 255, 255, 0.1596);
+    backdrop-filter: blur(1000px);
     border-radius: 20px;
     padding:20px;
 }
+
+
+.scard::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: -100;
+    background: linear-gradient(rgba(255, 255, 255, 1) 30%, rgb(136, 77, 0));
+    animation: rotate 3s linear infinite;
+  }
+  
+  .scard::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background: #f1e1e1;
+    border-radius: 15px;
+    z-index: -100;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
 #name{
     font-size:25px;
     padding:5px 0px;
@@ -43,7 +78,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(247, 140, 0);
+    background-color: rgba(165, 117, 55, 0.925);
     border-radius: 10px;
 }
 #detail{
@@ -59,14 +94,14 @@
     color:white;
 }
 #tools p{
-    background-color: rgb(255, 1, 1);
+    background-color: rgba(165, 117, 55, 0.925);
     padding:5px 10px;
     border-radius: 10px;
 }
 #line{
     width:120px;
     height: 5px;
-    background-color: rgb(237, 65, 65);
+    background-color: rgba(165, 117, 55, 0.925);
 }
 #tools i{
     font-size: 15px;

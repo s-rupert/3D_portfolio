@@ -64,8 +64,7 @@ iframe {
     margin: vw 0;
     margin-left: -3vw;
     white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow:hidden;
     align-items: center;
     height: 500px;
 }
@@ -327,6 +326,11 @@ iframe {
 
 }
 
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    touch-action: none;
+  }
 
 
 /* If the screen width is less than 700 or specifically for mobile phones */
@@ -351,7 +355,7 @@ iframe {
 
     #project-card {
         margin-top: 20px;
-        height: 65vw;
+        height: 70vw;
     }
     #project-card::after, #project-card::before{
         height: 65vw;

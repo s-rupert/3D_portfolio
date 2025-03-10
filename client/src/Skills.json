@@ -21,7 +21,7 @@
       "name": "Project Management & Problem-Solving",
       "detail": "Effectively managing projects from start to finish, ensuring timely delivery and high-quality results. Adept at solving complex problems and optimizing workflows for maximum efficiency.",
       "tools": ["Spreadsheet", "Notion", "GitHub", "VS-code"],
-      "logos": ["Spreadsheet.png","notion.png","Github.png","vscode.png"]
+      "logos": ["Spreadsheet.png","notion.png","GitHub.png","vscode.png"]
     },
     {
       "name": "API & Database Design",
