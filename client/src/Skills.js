@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './skillstyle.css';
 import dataSkill from './Skills.json'
 
@@ -17,7 +17,7 @@ for (let i = 0; i < dataSkill.length; i++) {
       <div id="toolkit">
         {dataSkill[i].tools.map((tool, j) => (
           <div>
-            <img src={`Logos/${dataSkill[i].logos[j]}`} alt={tool} />
+            <img loading="lazy" src={`Logos/${dataSkill[i].logos[j]}`} alt={tool} />
             <p>{tool}</p>
           </div>
         ))}

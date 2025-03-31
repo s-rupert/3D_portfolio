@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import "./Projectstyle.css";
 const Product = require("./Product.json");
 
@@ -202,6 +202,7 @@ const Project = () => {
         onClick={() => cardClickHandler(positions[i])}
       >
         <iframe
+          loading="lazy"
           src={Project[i].url}
           title="YouTube video player"
           frameBorder="0"
@@ -238,57 +239,8 @@ const Project = () => {
     );
   }
 
-  const disableScroll = () => {
-    document.body.classList.add("no-scroll");
-  };
   
-  const enableScroll = () => {
-    document.body.classList.remove("no-scroll");
-  };
-
-  // identifying touch
-  const [startPos, setStartPos] = useState(null);
-  const [endPos, setEndPos] = useState(null);
-
-  const handleStart = (event) => {
-    // event.preventDefault();
-    disableScroll();
-    const x = event.clientX || event.touches?.[0]?.clientX;
-    setStartPos(x);
-  };
-
-  const handleEnd = (event) => {
-    enableScroll();
-    const x = event.clientX || event.changedTouches?.[0]?.clientX;
-    setEndPos(x);
-  };
-
-  useEffect(() => {
-    if (startPos && endPos) {
-      if (startPos > endPos) {
-        cardClickHandler(4); 
-      } else if (startPos < endPos) {
-        cardClickHandler(2); 
-      }
-    }
-  }, [endPos]);
-
-  useEffect(() => {
-    const element = document.getElementById("project-card");
-
-    // Add event listeners
-    element.addEventListener("touchstart", handleStart, { passive: false });
-    element.addEventListener("touchend", handleEnd, { passive: false });
-
-    // Cleanup event listeners
-    return () => {
-      element.removeEventListener("touchstart", handleStart);
-      element.removeEventListener("touchend", handleEnd);
-    };
-  }, [startPos, endPos]);
-
-
-  //Handling the card scrolls
+  //Handling the card scrolls on Click
   useEffect(() => {
     const colorCard = document.getElementById("project-card");
     if (!colorCard) return;
